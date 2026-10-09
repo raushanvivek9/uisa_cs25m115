@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d4fd5886cd555e13acc4991569d55c2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5d4fd5886cd555e13acc4991569d55c2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5d4fd5886cd555e13acc4991569d55c2 = L.map(
+                "map_5d4fd5886cd555e13acc4991569d55c2",
+                {
+                    center: [13.712389450934566, 79.59039696808776],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_5d4fd5886cd555e13acc4991569d55c2);
+
+            
+
+        
+    
+            var tile_layer_820529d6576770e0c9d41e3fc1e47a16 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_820529d6576770e0c9d41e3fc1e47a16.addTo(map_5d4fd5886cd555e13acc4991569d55c2);
+        
+    
+            var feature_group_f9a0e4c89419230deb15d186d2282190 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_08ccf9d73ae557c259877e304e16d183 = L.circleMarker(
+                [13.706101447645842, 79.59447101544288],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_688d1b67ab5ef9df13501812f3d6164a = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_4e76dbdf82d89b77881f0d6a425bfd1a = $(`<div id="html_4e76dbdf82d89b77881f0d6a425bfd1a" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB1         <br><br>          <b>Field Note:</b>         40         <br><br>          <b>Timestamp:</b>         2026-09-05 13:16:49.189000+00:00         <br><br>          <b>Observation ID:</b>         {fb7f2cf4-d821-4885-be45-0e82f7b7ca68}         <br><br>          <b>Coordinates:</b>         13.706101, 79.594471                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905131707224.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_688d1b67ab5ef9df13501812f3d6164a.setContent(html_4e76dbdf82d89b77881f0d6a425bfd1a);
+            
+        
+
+        circle_marker_08ccf9d73ae557c259877e304e16d183.bindPopup(popup_688d1b67ab5ef9df13501812f3d6164a)
+        ;
+
+        
+    
+    
+            circle_marker_08ccf9d73ae557c259877e304e16d183.bindTooltip(
+                `<div>
+                     WB1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f288b3690128289eb1dbefc84d2392a3 = L.circleMarker(
+                [13.706612433298313, 79.59492829530402],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_027707c8f7f9d29306f56854cda6d15e = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_af7f372a3cb93c00a453703415dc7192 = $(`<div id="html_af7f372a3cb93c00a453703415dc7192" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB2         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 13:21:10.292000+00:00         <br><br>          <b>Observation ID:</b>         {3470a67b-649c-439b-b95c-07fa1a9b84cd}         <br><br>          <b>Coordinates:</b>         13.706612, 79.594928                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905132124992.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_027707c8f7f9d29306f56854cda6d15e.setContent(html_af7f372a3cb93c00a453703415dc7192);
+            
+        
+
+        circle_marker_f288b3690128289eb1dbefc84d2392a3.bindPopup(popup_027707c8f7f9d29306f56854cda6d15e)
+        ;
+
+        
+    
+    
+            circle_marker_f288b3690128289eb1dbefc84d2392a3.bindTooltip(
+                `<div>
+                     WB2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5183bb1dfe0ceaba4a14029ddfe2553 = L.circleMarker(
+                [13.708293806939764, 79.59488911110357],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_d16db21f085425c0c1d32bdb7dd78e45 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_b5599b67cc93f80da6d4de72908f3aec = $(`<div id="html_b5599b67cc93f80da6d4de72908f3aec" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB3         <br><br>          <b>Field Note:</b>         30         <br><br>          <b>Timestamp:</b>         2026-09-05 13:28:14.534000+00:00         <br><br>          <b>Observation ID:</b>         {ff8cddf2-c087-4a44-ab7c-b993df7e43dd}         <br><br>          <b>Coordinates:</b>         13.708294, 79.594889                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905132844458.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_d16db21f085425c0c1d32bdb7dd78e45.setContent(html_b5599b67cc93f80da6d4de72908f3aec);
+            
+        
+
+        circle_marker_a5183bb1dfe0ceaba4a14029ddfe2553.bindPopup(popup_d16db21f085425c0c1d32bdb7dd78e45)
+        ;
+
+        
+    
+    
+            circle_marker_a5183bb1dfe0ceaba4a14029ddfe2553.bindTooltip(
+                `<div>
+                     WB3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57d2765bfacacdeed8e2bb0b1ab383ac = L.circleMarker(
+                [13.707682352525667, 79.59436588129572],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_228018786069ab78b9f28a432e79fed4 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_3802e20639092de8f034c43b47949bc2 = $(`<div id="html_3802e20639092de8f034c43b47949bc2" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB4         <br><br>          <b>Field Note:</b>         70         <br><br>          <b>Timestamp:</b>         2026-09-05 13:31:04.544000+00:00         <br><br>          <b>Observation ID:</b>         {705aca39-81b1-48eb-9476-5a2bce76b8ac}         <br><br>          <b>Coordinates:</b>         13.707682, 79.594366                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905133123925.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_228018786069ab78b9f28a432e79fed4.setContent(html_3802e20639092de8f034c43b47949bc2);
+            
+        
+
+        circle_marker_57d2765bfacacdeed8e2bb0b1ab383ac.bindPopup(popup_228018786069ab78b9f28a432e79fed4)
+        ;
+
+        
+    
+    
+            circle_marker_57d2765bfacacdeed8e2bb0b1ab383ac.bindTooltip(
+                `<div>
+                     WB4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bcd8978ef9ea761a037bf2431831b32a = L.circleMarker(
+                [13.707160326618506, 79.59454405969588],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_545c9a94a215fa23c075e5908edac7bb = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_10fb15daedac2fd61f1a8b2229c576cc = $(`<div id="html_10fb15daedac2fd61f1a8b2229c576cc" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB5         <br><br>          <b>Field Note:</b>         60         <br><br>          <b>Timestamp:</b>         2026-09-05 13:33:19.016000+00:00         <br><br>          <b>Observation ID:</b>         {493e138e-0a4f-47c5-bb75-6eab5c3d750b}         <br><br>          <b>Coordinates:</b>         13.707160, 79.594544                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905133333396.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_545c9a94a215fa23c075e5908edac7bb.setContent(html_10fb15daedac2fd61f1a8b2229c576cc);
+            
+        
+
+        circle_marker_bcd8978ef9ea761a037bf2431831b32a.bindPopup(popup_545c9a94a215fa23c075e5908edac7bb)
+        ;
+
+        
+    
+    
+            circle_marker_bcd8978ef9ea761a037bf2431831b32a.bindTooltip(
+                `<div>
+                     WB5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc74f0451604d2674347ec7ad3cc65f0 = L.circleMarker(
+                [13.706744251196454, 79.59450578934351],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_472b296178a354d39d530ea6dc833cbc = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7d9f28c047803287c0ee94749870bfee = $(`<div id="html_7d9f28c047803287c0ee94749870bfee" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB6         <br><br>          <b>Field Note:</b>         80         <br><br>          <b>Timestamp:</b>         2026-09-05 13:34:53.154000+00:00         <br><br>          <b>Observation ID:</b>         {f60629f4-ffb4-4594-ae0d-51b49cd0d26b}         <br><br>          <b>Coordinates:</b>         13.706744, 79.594506                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905133509841.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_472b296178a354d39d530ea6dc833cbc.setContent(html_7d9f28c047803287c0ee94749870bfee);
+            
+        
+
+        circle_marker_dc74f0451604d2674347ec7ad3cc65f0.bindPopup(popup_472b296178a354d39d530ea6dc833cbc)
+        ;
+
+        
+    
+    
+            circle_marker_dc74f0451604d2674347ec7ad3cc65f0.bindTooltip(
+                `<div>
+                     WB6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7b178a8dc7692131ec75c360182bdbd = L.circleMarker(
+                [13.706106908064337, 79.59247643981949],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_dd3c1fb957311bfa3b5fa2286d5f238a = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7c6ee73b7b7189aac1819c1cfb5ffa8c = $(`<div id="html_7c6ee73b7b7189aac1819c1cfb5ffa8c" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB7         <br><br>          <b>Field Note:</b>         80         <br><br>          <b>Timestamp:</b>         2026-09-05 13:47:19.866000+00:00         <br><br>          <b>Observation ID:</b>         {bf42da27-bd6a-4b41-8ffe-943d3033bdbd}         <br><br>          <b>Coordinates:</b>         13.706107, 79.592476                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905134833075.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_dd3c1fb957311bfa3b5fa2286d5f238a.setContent(html_7c6ee73b7b7189aac1819c1cfb5ffa8c);
+            
+        
+
+        circle_marker_d7b178a8dc7692131ec75c360182bdbd.bindPopup(popup_dd3c1fb957311bfa3b5fa2286d5f238a)
+        ;
+
+        
+    
+    
+            circle_marker_d7b178a8dc7692131ec75c360182bdbd.bindTooltip(
+                `<div>
+                     WB7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7be26c1bbeda0a8cc19521f76822a967 = L.circleMarker(
+                [13.707252585578981, 79.59278928373205],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_c19013a41806cb7150c888b35e0101dd = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_7b94824c9d33e6aa6cdd7611f04705b6 = $(`<div id="html_7b94824c9d33e6aa6cdd7611f04705b6" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB8         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 13:50:43.425000+00:00         <br><br>          <b>Observation ID:</b>         {599a43b2-e949-4ef5-b072-d9a770426b0e}         <br><br>          <b>Coordinates:</b>         13.707253, 79.592789                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905135054441.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_c19013a41806cb7150c888b35e0101dd.setContent(html_7b94824c9d33e6aa6cdd7611f04705b6);
+            
+        
+
+        circle_marker_7be26c1bbeda0a8cc19521f76822a967.bindPopup(popup_c19013a41806cb7150c888b35e0101dd)
+        ;
+
+        
+    
+    
+            circle_marker_7be26c1bbeda0a8cc19521f76822a967.bindTooltip(
+                `<div>
+                     WB8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3accfd8ace61f74f78c3bdd2f30a74f1 = L.circleMarker(
+                [13.707413969068972, 79.59288200417151],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_cbec7622c5cf0c9013f9a9a5715bd318 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_90140440ce9a0360f6fc3d75efcc905c = $(`<div id="html_90140440ce9a0360f6fc3d75efcc905c" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB9         <br><br>          <b>Field Note:</b>         40         <br><br>          <b>Timestamp:</b>         2026-09-05 13:51:31.914000+00:00         <br><br>          <b>Observation ID:</b>         {b9a4ffec-8071-458d-b6ec-4c9d1fbb05f2}         <br><br>          <b>Coordinates:</b>         13.707414, 79.592882                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905135141407.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_cbec7622c5cf0c9013f9a9a5715bd318.setContent(html_90140440ce9a0360f6fc3d75efcc905c);
+            
+        
+
+        circle_marker_3accfd8ace61f74f78c3bdd2f30a74f1.bindPopup(popup_cbec7622c5cf0c9013f9a9a5715bd318)
+        ;
+
+        
+    
+    
+            circle_marker_3accfd8ace61f74f78c3bdd2f30a74f1.bindTooltip(
+                `<div>
+                     WB9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9da94ed2358d96d3cd075454b0105dcc = L.circleMarker(
+                [13.707473854136317, 79.59289642769826],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_1f1050ca3c4a8f10761974c3a9417cb3 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_da30c7ad5e4cd5644541bd1b89a30f45 = $(`<div id="html_da30c7ad5e4cd5644541bd1b89a30f45" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB10         <br><br>          <b>Field Note:</b>         60         <br><br>          <b>Timestamp:</b>         2026-09-05 13:52:07.345000+00:00         <br><br>          <b>Observation ID:</b>         {d64aecd6-f483-4716-8c84-6224cbb6134e}         <br><br>          <b>Coordinates:</b>         13.707474, 79.592896                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905135216770.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_1f1050ca3c4a8f10761974c3a9417cb3.setContent(html_da30c7ad5e4cd5644541bd1b89a30f45);
+            
+        
+
+        circle_marker_9da94ed2358d96d3cd075454b0105dcc.bindPopup(popup_1f1050ca3c4a8f10761974c3a9417cb3)
+        ;
+
+        
+    
+    
+            circle_marker_9da94ed2358d96d3cd075454b0105dcc.bindTooltip(
+                `<div>
+                     WB10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76160e03934858c44fb836aa8f6ae5b4 = L.circleMarker(
+                [13.707499564645758, 79.59295184575197],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_12aa3b7276c12076e44e8b00003102c4 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_f7a351431df95193e81931a3546c62b0 = $(`<div id="html_f7a351431df95193e81931a3546c62b0" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB11         <br><br>          <b>Field Note:</b>         70         <br><br>          <b>Timestamp:</b>         2026-09-05 13:52:42.773000+00:00         <br><br>          <b>Observation ID:</b>         {8f95b4e6-dfe3-4def-a0a5-a0de9101a3f1}         <br><br>          <b>Coordinates:</b>         13.707500, 79.592952                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905135249471.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_12aa3b7276c12076e44e8b00003102c4.setContent(html_f7a351431df95193e81931a3546c62b0);
+            
+        
+
+        circle_marker_76160e03934858c44fb836aa8f6ae5b4.bindPopup(popup_12aa3b7276c12076e44e8b00003102c4)
+        ;
+
+        
+    
+    
+            circle_marker_76160e03934858c44fb836aa8f6ae5b4.bindTooltip(
+                `<div>
+                     WB11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_79852e66e3dd6bf084611d1c8eb5809b = L.circleMarker(
+                [13.70741994023016, 79.59296212981445],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_437073390ca1c86b29b84af414030b2e = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_d12b8c64b99aee7acd050d8c6240fe89 = $(`<div id="html_d12b8c64b99aee7acd050d8c6240fe89" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB12         <br><br>          <b>Field Note:</b>         80         <br><br>          <b>Timestamp:</b>         2026-09-05 13:53:15.804000+00:00         <br><br>          <b>Observation ID:</b>         {8cb81c6a-c496-40a4-8522-ec1681cef483}         <br><br>          <b>Coordinates:</b>         13.707420, 79.592962                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905135323662.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_437073390ca1c86b29b84af414030b2e.setContent(html_d12b8c64b99aee7acd050d8c6240fe89);
+            
+        
+
+        circle_marker_79852e66e3dd6bf084611d1c8eb5809b.bindPopup(popup_437073390ca1c86b29b84af414030b2e)
+        ;
+
+        
+    
+    
+            circle_marker_79852e66e3dd6bf084611d1c8eb5809b.bindTooltip(
+                `<div>
+                     WB12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e277e106b4ace5f0c2da4813cd1f09f7 = L.circleMarker(
+                [13.708418828250082, 79.59264045066972],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_e5918286d798e54d36898d680efe0004 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_09a47afcd78665b6b21967cd1d022882 = $(`<div id="html_09a47afcd78665b6b21967cd1d022882" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB13         <br><br>          <b>Field Note:</b>         30         <br><br>          <b>Timestamp:</b>         2026-09-05 13:57:11.685000+00:00         <br><br>          <b>Observation ID:</b>         {e59af697-d60b-43fc-a5c4-f7af282b02a5}         <br><br>          <b>Coordinates:</b>         13.708419, 79.592640                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905135719319.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_e5918286d798e54d36898d680efe0004.setContent(html_09a47afcd78665b6b21967cd1d022882);
+            
+        
+
+        circle_marker_e277e106b4ace5f0c2da4813cd1f09f7.bindPopup(popup_e5918286d798e54d36898d680efe0004)
+        ;
+
+        
+    
+    
+            circle_marker_e277e106b4ace5f0c2da4813cd1f09f7.bindTooltip(
+                `<div>
+                     WB13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0363826c75630eed3fcfc39175a5c60 = L.circleMarker(
+                [13.707320620127087, 79.59093681330754],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_3bf84850c5296c12be4684717672b667 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ee7074e0f140735fe2e544949a6df721 = $(`<div id="html_ee7074e0f140735fe2e544949a6df721" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB14         <br><br>          <b>Field Note:</b>         5         <br><br>          <b>Timestamp:</b>         2026-09-05 14:01:20.577000+00:00         <br><br>          <b>Observation ID:</b>         {748f67af-44a5-4abe-813f-685f9d73dbeb}         <br><br>          <b>Coordinates:</b>         13.707321, 79.590937                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905140141637.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_3bf84850c5296c12be4684717672b667.setContent(html_ee7074e0f140735fe2e544949a6df721);
+            
+        
+
+        circle_marker_b0363826c75630eed3fcfc39175a5c60.bindPopup(popup_3bf84850c5296c12be4684717672b667)
+        ;
+
+        
+    
+    
+            circle_marker_b0363826c75630eed3fcfc39175a5c60.bindTooltip(
+                `<div>
+                     WB14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02bb85dd760b5fb56fc610277e198fdc = L.circleMarker(
+                [13.707386897791249, 79.59088857157994],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_ed4cbc5328430789916b31e599455d6b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_cd81bae79b0dc2cca5a38b2c1cf15950 = $(`<div id="html_cd81bae79b0dc2cca5a38b2c1cf15950" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB15         <br><br>          <b>Field Note:</b>         20         <br><br>          <b>Timestamp:</b>         2026-09-05 14:02:06.344000+00:00         <br><br>          <b>Observation ID:</b>         {1fa33724-1114-410c-ac42-0345541bd72a}         <br><br>          <b>Coordinates:</b>         13.707387, 79.590889                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905140219172.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_ed4cbc5328430789916b31e599455d6b.setContent(html_cd81bae79b0dc2cca5a38b2c1cf15950);
+            
+        
+
+        circle_marker_02bb85dd760b5fb56fc610277e198fdc.bindPopup(popup_ed4cbc5328430789916b31e599455d6b)
+        ;
+
+        
+    
+    
+            circle_marker_02bb85dd760b5fb56fc610277e198fdc.bindTooltip(
+                `<div>
+                     WB15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cdc71fc754da3c88acc8acab4207737a = L.circleMarker(
+                [13.711100472392758, 79.59235406268557],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_d2ef6747d7ee9b2ec507983a61490d7d = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_cfb75fcb29a8185c0d5bf25ad80326e6 = $(`<div id="html_cfb75fcb29a8185c0d5bf25ad80326e6" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB16         <br><br>          <b>Field Note:</b>         5         <br><br>          <b>Timestamp:</b>         2026-09-05 14:11:06.587000+00:00         <br><br>          <b>Observation ID:</b>         {10e9fc3e-64d4-49c6-9b30-7ded4b12b66e}         <br><br>          <b>Coordinates:</b>         13.711100, 79.592354                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905141117110.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_d2ef6747d7ee9b2ec507983a61490d7d.setContent(html_cfb75fcb29a8185c0d5bf25ad80326e6);
+            
+        
+
+        circle_marker_cdc71fc754da3c88acc8acab4207737a.bindPopup(popup_d2ef6747d7ee9b2ec507983a61490d7d)
+        ;
+
+        
+    
+    
+            circle_marker_cdc71fc754da3c88acc8acab4207737a.bindTooltip(
+                `<div>
+                     WB16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a9933e35d9bc39d5d4f2c4e70ec3bd07 = L.circleMarker(
+                [13.70983310696944, 79.59235355277296],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_a0f7619d406fb93dd4d44d7966776e9b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_298eabc2b576dd6e5d02cdc2931f287a = $(`<div id="html_298eabc2b576dd6e5d02cdc2931f287a" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB17         <br><br>          <b>Field Note:</b>         80         <br><br>          <b>Timestamp:</b>         2026-09-05 14:13:20.514000+00:00         <br><br>          <b>Observation ID:</b>         {e64c7668-25d8-4146-9036-1582e7c7d6ef}         <br><br>          <b>Coordinates:</b>         13.709833, 79.592354                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905141329516.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_a0f7619d406fb93dd4d44d7966776e9b.setContent(html_298eabc2b576dd6e5d02cdc2931f287a);
+            
+        
+
+        circle_marker_a9933e35d9bc39d5d4f2c4e70ec3bd07.bindPopup(popup_a0f7619d406fb93dd4d44d7966776e9b)
+        ;
+
+        
+    
+    
+            circle_marker_a9933e35d9bc39d5d4f2c4e70ec3bd07.bindTooltip(
+                `<div>
+                     WB17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_766c8310e42b3b6e43e732effe684502 = L.circleMarker(
+                [13.709714241387214, 79.59307428208679],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_4b35e5ab4a430cec0c212d64475f0dea = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_b0fa7eac7c2ff97e0964ce565ff19743 = $(`<div id="html_b0fa7eac7c2ff97e0964ce565ff19743" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB18         <br><br>          <b>Field Note:</b>         70         <br><br>          <b>Timestamp:</b>         2026-09-05 14:15:39.885000+00:00         <br><br>          <b>Observation ID:</b>         {a98bcdc3-3d20-4537-a9d5-a5b4a9827bef}         <br><br>          <b>Coordinates:</b>         13.709714, 79.593074                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905141547696.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_4b35e5ab4a430cec0c212d64475f0dea.setContent(html_b0fa7eac7c2ff97e0964ce565ff19743);
+            
+        
+
+        circle_marker_766c8310e42b3b6e43e732effe684502.bindPopup(popup_4b35e5ab4a430cec0c212d64475f0dea)
+        ;
+
+        
+    
+    
+            circle_marker_766c8310e42b3b6e43e732effe684502.bindTooltip(
+                `<div>
+                     WB18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e052031aa84fac71092fb712a6bad185 = L.circleMarker(
+                [13.70944388008815, 79.5932987384358],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_e7c80c44db37050d051de113b569fae5 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_de9f3fa93472ccf6ca5d6d0b178b390e = $(`<div id="html_de9f3fa93472ccf6ca5d6d0b178b390e" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB19         <br><br>          <b>Field Note:</b>         20         <br><br>          <b>Timestamp:</b>         2026-09-05 14:16:51.282000+00:00         <br><br>          <b>Observation ID:</b>         {2057913d-0076-4171-bb0f-a6bf4d371225}         <br><br>          <b>Coordinates:</b>         13.709444, 79.593299                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905141700641.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_e7c80c44db37050d051de113b569fae5.setContent(html_de9f3fa93472ccf6ca5d6d0b178b390e);
+            
+        
+
+        circle_marker_e052031aa84fac71092fb712a6bad185.bindPopup(popup_e7c80c44db37050d051de113b569fae5)
+        ;
+
+        
+    
+    
+            circle_marker_e052031aa84fac71092fb712a6bad185.bindTooltip(
+                `<div>
+                     WB19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6399a6b31bf43421576ed383ef0c7d40 = L.circleMarker(
+                [13.708912724324465, 79.59391314999253],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_e4672153e90aa0b96a2656121c32d440 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_cbd3a9c957335c6adc890ceb2be170ff = $(`<div id="html_cbd3a9c957335c6adc890ceb2be170ff" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB20         <br><br>          <b>Field Note:</b>         5         <br><br>          <b>Timestamp:</b>         2026-09-05 14:18:52.697000+00:00         <br><br>          <b>Observation ID:</b>         {7d96040d-9094-4c47-ba37-ab05de243c26}         <br><br>          <b>Coordinates:</b>         13.708913, 79.593913                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905141906989.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_e4672153e90aa0b96a2656121c32d440.setContent(html_cbd3a9c957335c6adc890ceb2be170ff);
+            
+        
+
+        circle_marker_6399a6b31bf43421576ed383ef0c7d40.bindPopup(popup_e4672153e90aa0b96a2656121c32d440)
+        ;
+
+        
+    
+    
+            circle_marker_6399a6b31bf43421576ed383ef0c7d40.bindTooltip(
+                `<div>
+                     WB20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bede6ea9cf38f532e72d78a377883f0b = L.circleMarker(
+                [13.709944436886108, 79.59333736396981],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_bd54d132d14bb1005c0163f4f00e80ca = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_16a4e75d21d4053d7913a9dd5b9fe875 = $(`<div id="html_16a4e75d21d4053d7913a9dd5b9fe875" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB21         <br><br>          <b>Field Note:</b>         30         <br><br>          <b>Timestamp:</b>         2026-09-05 14:21:45.490000+00:00         <br><br>          <b>Observation ID:</b>         {6323732f-ab17-40a6-bc00-8e291182013a}         <br><br>          <b>Coordinates:</b>         13.709944, 79.593337                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905142152071.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_bd54d132d14bb1005c0163f4f00e80ca.setContent(html_16a4e75d21d4053d7913a9dd5b9fe875);
+            
+        
+
+        circle_marker_bede6ea9cf38f532e72d78a377883f0b.bindPopup(popup_bd54d132d14bb1005c0163f4f00e80ca)
+        ;
+
+        
+    
+    
+            circle_marker_bede6ea9cf38f532e72d78a377883f0b.bindTooltip(
+                `<div>
+                     WB21
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7dfb23473082599aeb8017498bd8b8a = L.circleMarker(
+                [13.710023673428164, 79.59321179815502],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_d7241eab04f180d9e6e06c7ba06c47eb = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_08e2980338934bd7c1c4459ddbf62b98 = $(`<div id="html_08e2980338934bd7c1c4459ddbf62b98" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB22         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 14:22:35.171000+00:00         <br><br>          <b>Observation ID:</b>         {eca40dd2-40ae-4fe7-bf6c-7e47cad9d0fd}         <br><br>          <b>Coordinates:</b>         13.710024, 79.593212                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905142244951.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_d7241eab04f180d9e6e06c7ba06c47eb.setContent(html_08e2980338934bd7c1c4459ddbf62b98);
+            
+        
+
+        circle_marker_f7dfb23473082599aeb8017498bd8b8a.bindPopup(popup_d7241eab04f180d9e6e06c7ba06c47eb)
+        ;
+
+        
+    
+    
+            circle_marker_f7dfb23473082599aeb8017498bd8b8a.bindTooltip(
+                `<div>
+                     WB22
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_166e69a5774a7c2a28655278304192ed = L.circleMarker(
+                [13.712189944445768, 79.59240557858388],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_cfe784780a5ffefa600f3fc1e5be9e24 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_73bb8b12d57a978b0e837113a3ea6e50 = $(`<div id="html_73bb8b12d57a978b0e837113a3ea6e50" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB23         <br><br>          <b>Field Note:</b>         90         <br><br>          <b>Timestamp:</b>         2026-09-05 14:28:37.026000+00:00         <br><br>          <b>Observation ID:</b>         {0c23effa-ed0c-4f45-8439-32606a7bff8c}         <br><br>          <b>Coordinates:</b>         13.712190, 79.592406                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905142851852.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_cfe784780a5ffefa600f3fc1e5be9e24.setContent(html_73bb8b12d57a978b0e837113a3ea6e50);
+            
+        
+
+        circle_marker_166e69a5774a7c2a28655278304192ed.bindPopup(popup_cfe784780a5ffefa600f3fc1e5be9e24)
+        ;
+
+        
+    
+    
+            circle_marker_166e69a5774a7c2a28655278304192ed.bindTooltip(
+                `<div>
+                     WB23
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f12bdf6a6700b8945b61f92199313cb = L.circleMarker(
+                [13.712846838949385, 79.5917389737787],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_439746910fa740b262eb4d9dddcbbea7 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_2ad3c3491412a97190ba908bef4a214b = $(`<div id="html_2ad3c3491412a97190ba908bef4a214b" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB24         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 14:30:41.407000+00:00         <br><br>          <b>Observation ID:</b>         {3a7daa37-538a-4ce4-b46b-0efbb81d32eb}         <br><br>          <b>Coordinates:</b>         13.712847, 79.591739                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905143049189.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_439746910fa740b262eb4d9dddcbbea7.setContent(html_2ad3c3491412a97190ba908bef4a214b);
+            
+        
+
+        circle_marker_7f12bdf6a6700b8945b61f92199313cb.bindPopup(popup_439746910fa740b262eb4d9dddcbbea7)
+        ;
+
+        
+    
+    
+            circle_marker_7f12bdf6a6700b8945b61f92199313cb.bindTooltip(
+                `<div>
+                     WB24
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99d6f31c8ac1b7031cff2da93f472b12 = L.circleMarker(
+                [13.71199652805291, 79.59161346698373],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_7d9f49e2712406899c95f19eedd36595 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_69c1b9dd4d93586f9d2d6d09b630f46e = $(`<div id="html_69c1b9dd4d93586f9d2d6d09b630f46e" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB25         <br><br>          <b>Field Note:</b>         20         <br><br>          <b>Timestamp:</b>         2026-09-05 14:32:41.484000+00:00         <br><br>          <b>Observation ID:</b>         {ef4d174a-40cf-4bd2-907d-5a880a181231}         <br><br>          <b>Coordinates:</b>         13.711997, 79.591613                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905143249183.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_7d9f49e2712406899c95f19eedd36595.setContent(html_69c1b9dd4d93586f9d2d6d09b630f46e);
+            
+        
+
+        circle_marker_99d6f31c8ac1b7031cff2da93f472b12.bindPopup(popup_7d9f49e2712406899c95f19eedd36595)
+        ;
+
+        
+    
+    
+            circle_marker_99d6f31c8ac1b7031cff2da93f472b12.bindTooltip(
+                `<div>
+                     WB25
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f894193459253327dca04d90d85a8440 = L.circleMarker(
+                [13.712165217456375, 79.58801315794443],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_3d515733d222dd88412fe658b1718b52 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_9fd7a4538d3efefe8bb9b4d6631a3126 = $(`<div id="html_9fd7a4538d3efefe8bb9b4d6631a3126" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB26         <br><br>          <b>Field Note:</b>         50         <br><br>          <b>Timestamp:</b>         2026-09-05 14:39:14.520000+00:00         <br><br>          <b>Observation ID:</b>         {bc5c9f2d-01db-437e-9dfb-e75e9b81db99}         <br><br>          <b>Coordinates:</b>         13.712165, 79.588013                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905143921447.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_3d515733d222dd88412fe658b1718b52.setContent(html_9fd7a4538d3efefe8bb9b4d6631a3126);
+            
+        
+
+        circle_marker_f894193459253327dca04d90d85a8440.bindPopup(popup_3d515733d222dd88412fe658b1718b52)
+        ;
+
+        
+    
+    
+            circle_marker_f894193459253327dca04d90d85a8440.bindTooltip(
+                `<div>
+                     WB26
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ad02de036e29cd940dc84fd48e4fe0bc = L.circleMarker(
+                [13.712776730885858, 79.58815899846802],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_00d0c487788c90ed0aca624f260c0ea7 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_4f59a4a0e33720c8c48df230b868ed3f = $(`<div id="html_4f59a4a0e33720c8c48df230b868ed3f" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB27         <br><br>          <b>Field Note:</b>         0         <br><br>          <b>Timestamp:</b>         2026-09-05 14:43:36.074000+00:00         <br><br>          <b>Observation ID:</b>         {19f6920b-23c8-41b3-ada6-69382395b0d1}         <br><br>          <b>Coordinates:</b>         13.712777, 79.588159                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905144347957.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_00d0c487788c90ed0aca624f260c0ea7.setContent(html_4f59a4a0e33720c8c48df230b868ed3f);
+            
+        
+
+        circle_marker_ad02de036e29cd940dc84fd48e4fe0bc.bindPopup(popup_00d0c487788c90ed0aca624f260c0ea7)
+        ;
+
+        
+    
+    
+            circle_marker_ad02de036e29cd940dc84fd48e4fe0bc.bindTooltip(
+                `<div>
+                     WB27
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b220003efff7b8fe0cc06ad9543690ae = L.circleMarker(
+                [13.714035199459534, 79.58686515627477],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_5718ea1d121fa159b4eb25777262f300 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_217486002a327d6fa5afc8898c4b2150 = $(`<div id="html_217486002a327d6fa5afc8898c4b2150" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB28         <br><br>          <b>Field Note:</b>         5         <br><br>          <b>Timestamp:</b>         2026-09-05 14:48:15.184000+00:00         <br><br>          <b>Observation ID:</b>         {b45b1522-cd39-4e97-9ce9-d6bc097d99b9}         <br><br>          <b>Coordinates:</b>         13.714035, 79.586865                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905144821084.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_5718ea1d121fa159b4eb25777262f300.setContent(html_217486002a327d6fa5afc8898c4b2150);
+            
+        
+
+        circle_marker_b220003efff7b8fe0cc06ad9543690ae.bindPopup(popup_5718ea1d121fa159b4eb25777262f300)
+        ;
+
+        
+    
+    
+            circle_marker_b220003efff7b8fe0cc06ad9543690ae.bindTooltip(
+                `<div>
+                     WB28
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72788fc1c2e9658674a5fd343c5b163d = L.circleMarker(
+                [13.71405111770897, 79.58615289090304],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_ef916615f8465fd1452f2ba3b21e0690 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_13ea104d2c61d17787e2444019bff2fa = $(`<div id="html_13ea104d2c61d17787e2444019bff2fa" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB29         <br><br>          <b>Field Note:</b>         2         <br><br>          <b>Timestamp:</b>         2026-09-05 14:50:04.129000+00:00         <br><br>          <b>Observation ID:</b>         {9bdff239-e6b3-4754-a3eb-c3580dfa8e04}         <br><br>          <b>Coordinates:</b>         13.714051, 79.586153                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905145014804.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_ef916615f8465fd1452f2ba3b21e0690.setContent(html_13ea104d2c61d17787e2444019bff2fa);
+            
+        
+
+        circle_marker_72788fc1c2e9658674a5fd343c5b163d.bindPopup(popup_ef916615f8465fd1452f2ba3b21e0690)
+        ;
+
+        
+    
+    
+            circle_marker_72788fc1c2e9658674a5fd343c5b163d.bindTooltip(
+                `<div>
+                     WB29
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_12554c764e2ae3558efabb686e819d0e = L.circleMarker(
+                [13.71418704994696, 79.58612849575313],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_a0a483957b1fa5f405c339443f86b44d = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_88b00b5aa201637f2408c6f61beea9f6 = $(`<div id="html_88b00b5aa201637f2408c6f61beea9f6" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB30         <br><br>          <b>Field Note:</b>         5         <br><br>          <b>Timestamp:</b>         2026-09-05 14:50:42.730000+00:00         <br><br>          <b>Observation ID:</b>         {0fa655b4-1abc-4430-8c69-9383ea48697f}         <br><br>          <b>Coordinates:</b>         13.714187, 79.586128                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905145055352.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_a0a483957b1fa5f405c339443f86b44d.setContent(html_88b00b5aa201637f2408c6f61beea9f6);
+            
+        
+
+        circle_marker_12554c764e2ae3558efabb686e819d0e.bindPopup(popup_a0a483957b1fa5f405c339443f86b44d)
+        ;
+
+        
+    
+    
+            circle_marker_12554c764e2ae3558efabb686e819d0e.bindTooltip(
+                `<div>
+                     WB30
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf45950d4d186b0e7ed9a365078163d2 = L.circleMarker(
+                [13.714431086076655, 79.58608727832166],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_4cf629ef7ea6f6dde3c6be41c428528b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_21e0373d169addb45255ac8cd7825ff2 = $(`<div id="html_21e0373d169addb45255ac8cd7825ff2" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB31         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 14:51:29.998000+00:00         <br><br>          <b>Observation ID:</b>         {5deb7d3e-9e11-4a61-80d0-5413a7e9259f}         <br><br>          <b>Coordinates:</b>         13.714431, 79.586087                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905145151578.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_4cf629ef7ea6f6dde3c6be41c428528b.setContent(html_21e0373d169addb45255ac8cd7825ff2);
+            
+        
+
+        circle_marker_bf45950d4d186b0e7ed9a365078163d2.bindPopup(popup_4cf629ef7ea6f6dde3c6be41c428528b)
+        ;
+
+        
+    
+    
+            circle_marker_bf45950d4d186b0e7ed9a365078163d2.bindTooltip(
+                `<div>
+                     WB31
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5e019c92e852a23609ac0e6ad58b6ad = L.circleMarker(
+                [13.714610888805911, 79.58610373187044],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_1123a31cb1073ad710d766f9cb4b98ae = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_602095a7d394721a6a4025c91d698098 = $(`<div id="html_602095a7d394721a6a4025c91d698098" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB32         <br><br>          <b>Field Note:</b>         50         <br><br>          <b>Timestamp:</b>         2026-09-05 14:52:38.065000+00:00         <br><br>          <b>Observation ID:</b>         {289b1653-6df2-4960-aef3-69d5ce057dc7}         <br><br>          <b>Coordinates:</b>         13.714611, 79.586104                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905145247995.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_1123a31cb1073ad710d766f9cb4b98ae.setContent(html_602095a7d394721a6a4025c91d698098);
+            
+        
+
+        circle_marker_d5e019c92e852a23609ac0e6ad58b6ad.bindPopup(popup_1123a31cb1073ad710d766f9cb4b98ae)
+        ;
+
+        
+    
+    
+            circle_marker_d5e019c92e852a23609ac0e6ad58b6ad.bindTooltip(
+                `<div>
+                     WB32
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6cd6514725fb80bf2fcb3290a81a7fef = L.circleMarker(
+                [13.714661825224688, 79.58651212230048],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_4a14469b3511989d758062168556f87b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a82ce203f357be6acc9b577bccddd0cd = $(`<div id="html_a82ce203f357be6acc9b577bccddd0cd" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB33         <br><br>          <b>Field Note:</b>         20         <br><br>          <b>Timestamp:</b>         2026-09-05 14:54:06.166000+00:00         <br><br>          <b>Observation ID:</b>         {e096ceed-bf76-4098-a237-cbc32f248c47}         <br><br>          <b>Coordinates:</b>         13.714662, 79.586512                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905145415881.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_4a14469b3511989d758062168556f87b.setContent(html_a82ce203f357be6acc9b577bccddd0cd);
+            
+        
+
+        circle_marker_6cd6514725fb80bf2fcb3290a81a7fef.bindPopup(popup_4a14469b3511989d758062168556f87b)
+        ;
+
+        
+    
+    
+            circle_marker_6cd6514725fb80bf2fcb3290a81a7fef.bindTooltip(
+                `<div>
+                     WB33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a0451b85197bb44050e1770c10662e5 = L.circleMarker(
+                [13.714844562674934, 79.58617079632971],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_12993fbeb169ad8d53a2e6ea4aabc6d8 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_c1074753810ecc0d7682a17eefbdd7d6 = $(`<div id="html_c1074753810ecc0d7682a17eefbdd7d6" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB34         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 14:55:24.625000+00:00         <br><br>          <b>Observation ID:</b>         {561750e1-7cb1-4790-90ae-e1fe83253e68}         <br><br>          <b>Coordinates:</b>         13.714845, 79.586171                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905145534482.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_12993fbeb169ad8d53a2e6ea4aabc6d8.setContent(html_c1074753810ecc0d7682a17eefbdd7d6);
+            
+        
+
+        circle_marker_1a0451b85197bb44050e1770c10662e5.bindPopup(popup_12993fbeb169ad8d53a2e6ea4aabc6d8)
+        ;
+
+        
+    
+    
+            circle_marker_1a0451b85197bb44050e1770c10662e5.bindTooltip(
+                `<div>
+                     WB34
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_efe45d647a33c3d356bbc4c8a079e0d2 = L.circleMarker(
+                [13.714870643468577, 79.58613792559397],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_257b81d4267894eb7531724f4490211f = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_38ab1b8d8da618186f8df364ff34fe58 = $(`<div id="html_38ab1b8d8da618186f8df364ff34fe58" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB35         <br><br>          <b>Field Note:</b>         90         <br><br>          <b>Timestamp:</b>         2026-09-05 14:56:08.820000+00:00         <br><br>          <b>Observation ID:</b>         {d613b0f7-587e-4109-b8d6-504bfb8adce2}         <br><br>          <b>Coordinates:</b>         13.714871, 79.586138                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905145629885.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_257b81d4267894eb7531724f4490211f.setContent(html_38ab1b8d8da618186f8df364ff34fe58);
+            
+        
+
+        circle_marker_efe45d647a33c3d356bbc4c8a079e0d2.bindPopup(popup_257b81d4267894eb7531724f4490211f)
+        ;
+
+        
+    
+    
+            circle_marker_efe45d647a33c3d356bbc4c8a079e0d2.bindTooltip(
+                `<div>
+                     WB35
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6536f82fde8389b9b3c9f8fd96d985fa = L.circleMarker(
+                [13.716542531901059, 79.58613708496057],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_3660a3528282ec8c22f1698882842fb6 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_762bd8f4e3f9a3dc7b0f11e23d85f7e0 = $(`<div id="html_762bd8f4e3f9a3dc7b0f11e23d85f7e0" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB36         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 14:59:51.702000+00:00         <br><br>          <b>Observation ID:</b>         {9d3bc966-8b11-4046-a886-bd2e9df7446d}         <br><br>          <b>Coordinates:</b>         13.716543, 79.586137                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905150007831.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_3660a3528282ec8c22f1698882842fb6.setContent(html_762bd8f4e3f9a3dc7b0f11e23d85f7e0);
+            
+        
+
+        circle_marker_6536f82fde8389b9b3c9f8fd96d985fa.bindPopup(popup_3660a3528282ec8c22f1698882842fb6)
+        ;
+
+        
+    
+    
+            circle_marker_6536f82fde8389b9b3c9f8fd96d985fa.bindTooltip(
+                `<div>
+                     WB36
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be739257ca87bbc767f48c54a2c07507 = L.circleMarker(
+                [13.716650541208235, 79.58638470233258],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_3f9c98bd0c0d4e1442aa5ee01eda6b51 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_d373790ec965d81579bebdffeed87ccd = $(`<div id="html_d373790ec965d81579bebdffeed87ccd" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB37         <br><br>          <b>Field Note:</b>         30         <br><br>          <b>Timestamp:</b>         2026-09-05 15:01:30.496000+00:00         <br><br>          <b>Observation ID:</b>         {c5fcb7aa-8676-46ce-97ac-5ecdeee427c5}         <br><br>          <b>Coordinates:</b>         13.716651, 79.586385                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905150143756.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_3f9c98bd0c0d4e1442aa5ee01eda6b51.setContent(html_d373790ec965d81579bebdffeed87ccd);
+            
+        
+
+        circle_marker_be739257ca87bbc767f48c54a2c07507.bindPopup(popup_3f9c98bd0c0d4e1442aa5ee01eda6b51)
+        ;
+
+        
+    
+    
+            circle_marker_be739257ca87bbc767f48c54a2c07507.bindTooltip(
+                `<div>
+                     WB37
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_247abb4ca275eb8b6a48ce1086f6d5c3 = L.circleMarker(
+                [13.717325036031, 79.58648757764485],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_e4a954f4f1e344ecb16f7616010233ce = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_0ffcb6c77453f62373ba90a319577860 = $(`<div id="html_0ffcb6c77453f62373ba90a319577860" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         nan         <br><br>          <b>Field Note:</b>         nan         <br><br>          <b>Timestamp:</b>         2026-09-05 15:03:13.218000+00:00         <br><br>          <b>Observation ID:</b>         {c943a99d-5784-4f29-8a07-c532df2c448f}         <br><br>          <b>Coordinates:</b>         13.717325, 79.586488          <br><b>Photograph:</b> Not available      </div>     </div>`)[0];
+                popup_e4a954f4f1e344ecb16f7616010233ce.setContent(html_0ffcb6c77453f62373ba90a319577860);
+            
+        
+
+        circle_marker_247abb4ca275eb8b6a48ce1086f6d5c3.bindPopup(popup_e4a954f4f1e344ecb16f7616010233ce)
+        ;
+
+        
+    
+    
+            circle_marker_247abb4ca275eb8b6a48ce1086f6d5c3.bindTooltip(
+                `<div>
+                     nan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba01d0b6b6040c36c33b1a7d0308cf63 = L.circleMarker(
+                [13.71734260624059, 79.58649563738686],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_7d68c4ceec6e2fa51d89f8e8929a9f80 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a37e57e1a34fd88d5a451af2e628502a = $(`<div id="html_a37e57e1a34fd88d5a451af2e628502a" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB38         <br><br>          <b>Field Note:</b>         95         <br><br>          <b>Timestamp:</b>         2026-09-05 15:03:17.999000+00:00         <br><br>          <b>Observation ID:</b>         {608294e0-bb23-42eb-b35c-a86a8b2e989b}         <br><br>          <b>Coordinates:</b>         13.717343, 79.586496                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905150327189.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_7d68c4ceec6e2fa51d89f8e8929a9f80.setContent(html_a37e57e1a34fd88d5a451af2e628502a);
+            
+        
+
+        circle_marker_ba01d0b6b6040c36c33b1a7d0308cf63.bindPopup(popup_7d68c4ceec6e2fa51d89f8e8929a9f80)
+        ;
+
+        
+    
+    
+            circle_marker_ba01d0b6b6040c36c33b1a7d0308cf63.bindTooltip(
+                `<div>
+                     WB38
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b74fe6219cc4375458d2153fb6db95b = L.circleMarker(
+                [13.71761674183058, 79.5869622443375],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_c26f537614e7c3a42f3e09ceefd40371 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_55c70f7ac59ed1b93e815bb76ba08a94 = $(`<div id="html_55c70f7ac59ed1b93e815bb76ba08a94" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB39         <br><br>          <b>Field Note:</b>         100         <br><br>          <b>Timestamp:</b>         2026-09-05 15:05:10.628000+00:00         <br><br>          <b>Observation ID:</b>         {ec58b0c2-83b6-4e0f-b726-203057a3b16a}         <br><br>          <b>Coordinates:</b>         13.717617, 79.586962                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905150517647.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_c26f537614e7c3a42f3e09ceefd40371.setContent(html_55c70f7ac59ed1b93e815bb76ba08a94);
+            
+        
+
+        circle_marker_3b74fe6219cc4375458d2153fb6db95b.bindPopup(popup_c26f537614e7c3a42f3e09ceefd40371)
+        ;
+
+        
+    
+    
+            circle_marker_3b74fe6219cc4375458d2153fb6db95b.bindTooltip(
+                `<div>
+                     WB39
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bcae18af6c417a3ce53491e05e45645 = L.circleMarker(
+                [13.718004834840654, 79.58715099504823],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_bf18d377c4fbc60055f39d299195e58b = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_0aca3a68c0fb57d11372bfb5896ee5a5 = $(`<div id="html_0aca3a68c0fb57d11372bfb5896ee5a5" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB40         <br><br>          <b>Field Note:</b>         80         <br><br>          <b>Timestamp:</b>         2026-09-05 15:06:14.373000+00:00         <br><br>          <b>Observation ID:</b>         {2163f1c6-0e49-404e-a4e9-a6826ff8811a}         <br><br>          <b>Coordinates:</b>         13.718005, 79.587151                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905150620824.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_bf18d377c4fbc60055f39d299195e58b.setContent(html_0aca3a68c0fb57d11372bfb5896ee5a5);
+            
+        
+
+        circle_marker_5bcae18af6c417a3ce53491e05e45645.bindPopup(popup_bf18d377c4fbc60055f39d299195e58b)
+        ;
+
+        
+    
+    
+            circle_marker_5bcae18af6c417a3ce53491e05e45645.bindTooltip(
+                `<div>
+                     WB40
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7e4b88d892a5026571e75961c3615d9 = L.circleMarker(
+                [13.717767794875773, 79.58747110234839],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_3964f3080b69e120b058935703aab520 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_44d7b7308576b2fac95036fa2dbb8cb5 = $(`<div id="html_44d7b7308576b2fac95036fa2dbb8cb5" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB41         <br><br>          <b>Field Note:</b>         70         <br><br>          <b>Timestamp:</b>         2026-09-05 15:08:16.917000+00:00         <br><br>          <b>Observation ID:</b>         {e1579d1d-9b63-427e-8cc2-870ce49b62c5}         <br><br>          <b>Coordinates:</b>         13.717768, 79.587471                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905150822290.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_3964f3080b69e120b058935703aab520.setContent(html_44d7b7308576b2fac95036fa2dbb8cb5);
+            
+        
+
+        circle_marker_d7e4b88d892a5026571e75961c3615d9.bindPopup(popup_3964f3080b69e120b058935703aab520)
+        ;
+
+        
+    
+    
+            circle_marker_d7e4b88d892a5026571e75961c3615d9.bindTooltip(
+                `<div>
+                     WB41
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c59f24266f6e7bed9e126f6a390b61f = L.circleMarker(
+                [13.717166914689898, 79.58719894419015],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_6b6b6aa92a3e7ff15081f79a51ab60ee = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_6b6d90f84eed830697701c78947c807e = $(`<div id="html_6b6d90f84eed830697701c78947c807e" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB42         <br><br>          <b>Field Note:</b>         95         <br><br>          <b>Timestamp:</b>         2026-09-05 15:09:36.478000+00:00         <br><br>          <b>Observation ID:</b>         {3f312d46-fd79-4110-ae89-d15792fcc64e}         <br><br>          <b>Coordinates:</b>         13.717167, 79.587199                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905151004636.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_6b6b6aa92a3e7ff15081f79a51ab60ee.setContent(html_6b6d90f84eed830697701c78947c807e);
+            
+        
+
+        circle_marker_9c59f24266f6e7bed9e126f6a390b61f.bindPopup(popup_6b6b6aa92a3e7ff15081f79a51ab60ee)
+        ;
+
+        
+    
+    
+            circle_marker_9c59f24266f6e7bed9e126f6a390b61f.bindTooltip(
+                `<div>
+                     WB42
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f85880e87c6b3e6f8b7b056cb4d28bec = L.circleMarker(
+                [13.716970230391793, 79.58705108540687],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_47203756764ce81b9c58ab09b46dca66 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_8bd5fd7e40475329b377c7a612e3d438 = $(`<div id="html_8bd5fd7e40475329b377c7a612e3d438" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB43         <br><br>          <b>Field Note:</b>         98         <br><br>          <b>Timestamp:</b>         2026-09-05 15:10:34.448000+00:00         <br><br>          <b>Observation ID:</b>         {74267e01-6c1c-4feb-a1b3-60b46aaf59f8}         <br><br>          <b>Coordinates:</b>         13.716970, 79.587051                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905151039818.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_47203756764ce81b9c58ab09b46dca66.setContent(html_8bd5fd7e40475329b377c7a612e3d438);
+            
+        
+
+        circle_marker_f85880e87c6b3e6f8b7b056cb4d28bec.bindPopup(popup_47203756764ce81b9c58ab09b46dca66)
+        ;
+
+        
+    
+    
+            circle_marker_f85880e87c6b3e6f8b7b056cb4d28bec.bindTooltip(
+                `<div>
+                     WB43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38ab734636f1a6649dde278f29187619 = L.circleMarker(
+                [13.717736631516521, 79.58676581769699],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_6b1c5f39fe54ea49f4cb14fa3537b5e7 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_ddfc98dde4cf399098766d1996a636d2 = $(`<div id="html_ddfc98dde4cf399098766d1996a636d2" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB44         <br><br>          <b>Field Note:</b>         90         <br><br>          <b>Timestamp:</b>         2026-09-05 16:06:42.070000+00:00         <br><br>          <b>Observation ID:</b>         {61f252bc-c499-4478-956c-0a095239c962}         <br><br>          <b>Coordinates:</b>         13.717737, 79.586766                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905160653918.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_6b1c5f39fe54ea49f4cb14fa3537b5e7.setContent(html_ddfc98dde4cf399098766d1996a636d2);
+            
+        
+
+        circle_marker_38ab734636f1a6649dde278f29187619.bindPopup(popup_6b1c5f39fe54ea49f4cb14fa3537b5e7)
+        ;
+
+        
+    
+    
+            circle_marker_38ab734636f1a6649dde278f29187619.bindTooltip(
+                `<div>
+                     WB44
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa9118806c24d2d0ba76b7252373dfdc = L.circleMarker(
+                [13.716512255240387, 79.58854414382641],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_eb464ac7be113ebdb4e7efe56c5f3960 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_8add6b5a1b69191252577f48846f8933 = $(`<div id="html_8add6b5a1b69191252577f48846f8933" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB45         <br><br>          <b>Field Note:</b>         30         <br><br>          <b>Timestamp:</b>         2026-09-05 16:11:49.664000+00:00         <br><br>          <b>Observation ID:</b>         {c6906b6b-ea27-4b0c-b914-81047e893414}         <br><br>          <b>Coordinates:</b>         13.716512, 79.588544                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905161201755.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_eb464ac7be113ebdb4e7efe56c5f3960.setContent(html_8add6b5a1b69191252577f48846f8933);
+            
+        
+
+        circle_marker_aa9118806c24d2d0ba76b7252373dfdc.bindPopup(popup_eb464ac7be113ebdb4e7efe56c5f3960)
+        ;
+
+        
+    
+    
+            circle_marker_aa9118806c24d2d0ba76b7252373dfdc.bindTooltip(
+                `<div>
+                     WB45
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e49444b60723fbb8c005733c86ab7093 = L.circleMarker(
+                [13.715576017132921, 79.58862192477707],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_fc31d682e7f225e445b8fd024547e284 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_6784c03e34a65c6a876b22464510b2ce = $(`<div id="html_6784c03e34a65c6a876b22464510b2ce" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB46         <br><br>          <b>Field Note:</b>         15         <br><br>          <b>Timestamp:</b>         2026-09-05 16:13:49.519000+00:00         <br><br>          <b>Observation ID:</b>         {af455a2b-5404-44c4-a242-cae8ef06b77c}         <br><br>          <b>Coordinates:</b>         13.715576, 79.588622                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905161357845.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_fc31d682e7f225e445b8fd024547e284.setContent(html_6784c03e34a65c6a876b22464510b2ce);
+            
+        
+
+        circle_marker_e49444b60723fbb8c005733c86ab7093.bindPopup(popup_fc31d682e7f225e445b8fd024547e284)
+        ;
+
+        
+    
+    
+            circle_marker_e49444b60723fbb8c005733c86ab7093.bindTooltip(
+                `<div>
+                     WB46
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1cff6df7678544b33596025b8036ff6d = L.circleMarker(
+                [13.715011354142046, 79.58930580799317],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_147f8bddebe61953a4c890b2b9190e50 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_bf1ec8c986f651887adf634661deee9d = $(`<div id="html_bf1ec8c986f651887adf634661deee9d" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB47         <br><br>          <b>Field Note:</b>         5         <br><br>          <b>Timestamp:</b>         2026-09-05 16:15:52.269000+00:00         <br><br>          <b>Observation ID:</b>         {2483566f-5777-4f41-9a79-749872141e88}         <br><br>          <b>Coordinates:</b>         13.715011, 79.589306                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905161612995.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_147f8bddebe61953a4c890b2b9190e50.setContent(html_bf1ec8c986f651887adf634661deee9d);
+            
+        
+
+        circle_marker_1cff6df7678544b33596025b8036ff6d.bindPopup(popup_147f8bddebe61953a4c890b2b9190e50)
+        ;
+
+        
+    
+    
+            circle_marker_1cff6df7678544b33596025b8036ff6d.bindTooltip(
+                `<div>
+                     WB47
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8799a8b3e9406e03b6372b5f11ea488 = L.circleMarker(
+                [13.71453808465812, 79.58962434910835],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_3aa35cbce37b29f479e5ea39c58a80bf = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_e7e31085de6b35fac7c4a7b20195fb61 = $(`<div id="html_e7e31085de6b35fac7c4a7b20195fb61" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB48         <br><br>          <b>Field Note:</b>         20         <br><br>          <b>Timestamp:</b>         2026-09-05 16:17:11.503000+00:00         <br><br>          <b>Observation ID:</b>         {7260fde4-95c5-446f-b590-9de3c76ff202}         <br><br>          <b>Coordinates:</b>         13.714538, 79.589624                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905161719078.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_3aa35cbce37b29f479e5ea39c58a80bf.setContent(html_e7e31085de6b35fac7c4a7b20195fb61);
+            
+        
+
+        circle_marker_d8799a8b3e9406e03b6372b5f11ea488.bindPopup(popup_3aa35cbce37b29f479e5ea39c58a80bf)
+        ;
+
+        
+    
+    
+            circle_marker_d8799a8b3e9406e03b6372b5f11ea488.bindTooltip(
+                `<div>
+                     WB48
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c3667eec307416ff14497a074fc6f8f = L.circleMarker(
+                [13.714277748189053, 79.59017045285069],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_4330b591062c77bcd85718fa5adc32ca = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_1c4c7278855bd72bcb60f4cc28a109ee = $(`<div id="html_1c4c7278855bd72bcb60f4cc28a109ee" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB49         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 16:18:26.757000+00:00         <br><br>          <b>Observation ID:</b>         {ea01db87-988b-4a0f-bb9c-8d272f9d4a88}         <br><br>          <b>Coordinates:</b>         13.714278, 79.590170                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905161833664.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_4330b591062c77bcd85718fa5adc32ca.setContent(html_1c4c7278855bd72bcb60f4cc28a109ee);
+            
+        
+
+        circle_marker_0c3667eec307416ff14497a074fc6f8f.bindPopup(popup_4330b591062c77bcd85718fa5adc32ca)
+        ;
+
+        
+    
+    
+            circle_marker_0c3667eec307416ff14497a074fc6f8f.bindTooltip(
+                `<div>
+                     WB49
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_523019ba646ab41b18313c038e34fe6d = L.circleMarker(
+                [13.714992509256447, 79.59108141377666],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_3a0ec2a96b3062ee1accbc65c5a8d7d9 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_5acb825b3532aa2deb7d4c2615578a7c = $(`<div id="html_5acb825b3532aa2deb7d4c2615578a7c" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB50         <br><br>          <b>Field Note:</b>         30         <br><br>          <b>Timestamp:</b>         2026-09-05 16:22:26.319000+00:00         <br><br>          <b>Observation ID:</b>         {9cb2252e-1918-4deb-96b1-1290bfcb7fe6}         <br><br>          <b>Coordinates:</b>         13.714993, 79.591081                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905162240661.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_3a0ec2a96b3062ee1accbc65c5a8d7d9.setContent(html_5acb825b3532aa2deb7d4c2615578a7c);
+            
+        
+
+        circle_marker_523019ba646ab41b18313c038e34fe6d.bindPopup(popup_3a0ec2a96b3062ee1accbc65c5a8d7d9)
+        ;
+
+        
+    
+    
+            circle_marker_523019ba646ab41b18313c038e34fe6d.bindTooltip(
+                `<div>
+                     WB50
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e37219381c0a83e8f7a69fae79246e4 = L.circleMarker(
+                [13.715775122790548, 79.59183063304472],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_1b40d4b70fd3fc1616897c78364a2c71 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_56d8432dc9675fc44592e8b9a3026c0a = $(`<div id="html_56d8432dc9675fc44592e8b9a3026c0a" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB51         <br><br>          <b>Field Note:</b>         20         <br><br>          <b>Timestamp:</b>         2026-09-05 16:26:26.513000+00:00         <br><br>          <b>Observation ID:</b>         {6c4111e3-99b5-4e4a-91ac-146a09852a69}         <br><br>          <b>Coordinates:</b>         13.715775, 79.591831                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905162633461.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_1b40d4b70fd3fc1616897c78364a2c71.setContent(html_56d8432dc9675fc44592e8b9a3026c0a);
+            
+        
+
+        circle_marker_8e37219381c0a83e8f7a69fae79246e4.bindPopup(popup_1b40d4b70fd3fc1616897c78364a2c71)
+        ;
+
+        
+    
+    
+            circle_marker_8e37219381c0a83e8f7a69fae79246e4.bindTooltip(
+                `<div>
+                     WB51
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7ad2803d320adc1a014108ddb7069fea = L.circleMarker(
+                [13.714583423173268, 79.5943501259469],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_4f20a44dd4ebfd9be418255a4a2fe950 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_0b18b63a2cf63403328f23f93b91a771 = $(`<div id="html_0b18b63a2cf63403328f23f93b91a771" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB52         <br><br>          <b>Field Note:</b>         20         <br><br>          <b>Timestamp:</b>         2026-09-05 16:46:00.689000+00:00         <br><br>          <b>Observation ID:</b>         {f54cd9ac-ae81-43fd-bdbf-55f26e213797}         <br><br>          <b>Coordinates:</b>         13.714583, 79.594350                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905164616382.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_4f20a44dd4ebfd9be418255a4a2fe950.setContent(html_0b18b63a2cf63403328f23f93b91a771);
+            
+        
+
+        circle_marker_7ad2803d320adc1a014108ddb7069fea.bindPopup(popup_4f20a44dd4ebfd9be418255a4a2fe950)
+        ;
+
+        
+    
+    
+            circle_marker_7ad2803d320adc1a014108ddb7069fea.bindTooltip(
+                `<div>
+                     WB52
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d6c8cdf99f18a41bdea71416b824fd4 = L.circleMarker(
+                [13.714487919290399, 79.59571188317803],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_796de7e261a62bd40100b8cca48a449d = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_a594919587480e98883c9911ea86bfa5 = $(`<div id="html_a594919587480e98883c9911ea86bfa5" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB53         <br><br>          <b>Field Note:</b>         10         <br><br>          <b>Timestamp:</b>         2026-09-05 16:49:13.163000+00:00         <br><br>          <b>Observation ID:</b>         {138cc5b4-d61e-4d6f-9ef3-6d27779e21ff}         <br><br>          <b>Coordinates:</b>         13.714488, 79.595712                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905164923417.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_796de7e261a62bd40100b8cca48a449d.setContent(html_a594919587480e98883c9911ea86bfa5);
+            
+        
+
+        circle_marker_9d6c8cdf99f18a41bdea71416b824fd4.bindPopup(popup_796de7e261a62bd40100b8cca48a449d)
+        ;
+
+        
+    
+    
+            circle_marker_9d6c8cdf99f18a41bdea71416b824fd4.bindTooltip(
+                `<div>
+                     WB53
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_906c61cd4867807bd30a604f14308b01 = L.circleMarker(
+                [13.717013549251584, 79.59172767903577],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f9a0e4c89419230deb15d186d2282190);
+        
+    
+        var popup_0b6992f5af7a9f543ed8360d97a89d28 = L.popup({
+  "maxWidth": 400,
+});
+
+        
+            
+                var html_6dc344e7b5886d85ac11cb7869b96dc7 = $(`<div id="html_6dc344e7b5886d85ac11cb7869b96dc7" style="width: 100.0%; height: 100.0%;">     <div style="width:320px">          <h4>Waste Bin Observation</h4>          <b>Student:</b> CS25M115_Raushan Vivek         <br><br>          <b>Title:</b>         WB54         <br><br>          <b>Field Note:</b>         30         <br><br>          <b>Timestamp:</b>         2026-09-05 17:50:57.300000+00:00         <br><br>          <b>Observation ID:</b>         {8d29a9a9-e30b-43d0-84cb-0422ba6dec03}         <br><br>          <b>Coordinates:</b>         13.717014, 79.591728                   <br>         <b>Photograph:</b><br>         <img src="DCIM/JPEG_20260905175105642.jpg"              width="280"              style="margin-top:8px;">               </div>     </div>`)[0];
+                popup_0b6992f5af7a9f543ed8360d97a89d28.setContent(html_6dc344e7b5886d85ac11cb7869b96dc7);
+            
+        
+
+        circle_marker_906c61cd4867807bd30a604f14308b01.bindPopup(popup_0b6992f5af7a9f543ed8360d97a89d28)
+        ;
+
+        
+    
+    
+            circle_marker_906c61cd4867807bd30a604f14308b01.bindTooltip(
+                `<div>
+                     WB54
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_f9a0e4c89419230deb15d186d2282190.addTo(map_5d4fd5886cd555e13acc4991569d55c2);
+        
+    
+            var layer_control_030803e20fc5fe3046012f2316bd6c8a_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_820529d6576770e0c9d41e3fc1e47a16,
+                },
+                overlays :  {
+                    "Waste Bin Observations" : feature_group_f9a0e4c89419230deb15d186d2282190,
+                },
+            };
+            let layer_control_030803e20fc5fe3046012f2316bd6c8a = L.control.layers(
+                layer_control_030803e20fc5fe3046012f2316bd6c8a_layers.base_layers,
+                layer_control_030803e20fc5fe3046012f2316bd6c8a_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_5d4fd5886cd555e13acc4991569d55c2);
+
+        
+</script>
+</html>
