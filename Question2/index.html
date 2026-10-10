@@ -15,6 +15,8 @@ header p:last-child { max-width:760px; margin:16px 0 0; color:#d5e7e2; font-size
 .hero,.card { padding:22px 24px; border:1px solid #dce7e4; border-radius:14px; background:white; box-shadow:0 10px 28px #173b3a0b; }
 .hero,.card { margin-bottom:20px; }
 .hero { color:#172b3a; }
+.notebook-link { display:inline-block; margin-top:8px; padding:10px 14px; border-radius:8px; background:#176d60; color:white; font-weight:700; text-decoration:none; }
+.notebook-link:hover,.notebook-link:focus-visible { background:#10564c; outline:3px solid #9ed8c9; outline-offset:2px; }
 .subtitle,.footer { color:#64747b; }
 .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; margin-bottom:20px; }
 .grid .card { margin:0; }
@@ -45,7 +47,8 @@ iframe { border-color:#dce7e4 !important; }
 <main class="container">
 <section class="hero"><h2>About this analysis</h2>
 <p><b>Assignment:</b> Map the spatial expansion of built-up surface relative to the 2005 footprint.</p>
-<p>This portfolio presents the Question 2 GHSL built-up-surface analysis for the Jaipur Urban Local Body using four five-year epochs: 2005, 2010, 2015 and 2020.</p></section>
+<p>This portfolio presents the Question 2 GHSL built-up-surface analysis for the Jaipur Urban Local Body using four five-year epochs: 2005, 2010, 2015 and 2020.</p>
+<a class="notebook-link" href="CS25M115_Q2.ipynb">Open Question 2 notebook (.ipynb)</a></section>
 <section class="card"><h2>1. Interactive time-slider map</h2>
 <p>Use the time slider to compare the GHSL built-up surface across the 2005, 2010, 2015 and 2020 epochs.</p>
 <iframe src="Jaipur_GHSL_TimeSlider_2005_2020.html" width="100%" height="700" style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;" title="Jaipur GHSL interactive time slider"></iframe>
