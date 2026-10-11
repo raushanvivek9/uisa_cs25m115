@@ -23,6 +23,7 @@ header p:last-child { max-width:760px; margin:16px 0 0; color:#d5e7e2; font-size
 h2 { margin:0 0 8px; }
 .metric { font-size:1.8rem; font-weight:700; } .label { color:#52636d; font-size:.9rem; }
 figure { margin:0; } img { max-width:100%; width:100%; height:auto; border:1px solid #dce7e4; border-radius:10px; background:#fff; }
+.animation { display:block; width:min(100%,640px); margin:0 auto; }
 figcaption { color:#52636d; font-size:.9rem; margin-top:7px; }
 table { border-collapse:collapse; width:100%; } th,td { border:1px solid #dce7e4; padding:10px; text-align:right; } th { text-align:center; background:#f3f7f6; }
 .note { background:#fff8e1; border-left:4px solid #f9ab00; padding:12px 15px; } .missing { color:#a00; }
@@ -53,90 +54,77 @@ iframe { border-color:#dce7e4 !important; }
 <p>Use the time slider to compare the GHSL built-up surface across the 2005, 2010, 2015 and 2020 epochs.</p>
 <iframe src="Jaipur_GHSL_TimeSlider_2005_2020.html" width="100%" height="700" style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;" title="Jaipur GHSL interactive time slider"></iframe>
 </section>
-<section class="card"><h2>2. Temporal animation</h2><img src="Jaipur_GHSL_builtup_2005_2020_labelled.gif" alt="Labelled GHSL built-up surface animation from 2005 to 2020"></section>
+<section class="card"><h2>2. Temporal animation</h2><img class="animation" src="Jaipur_GHSL_builtup_2005_2020_labelled.gif" alt="Labelled GHSL built-up surface animation from 2005 to 2020"></section>
 <section class="card"><h2>3. Built-up surface maps by epoch</h2><div class="grid">
-<figure><img src="builtup_2005.png" alt="GHSL built-up surface in 2005"><figcaption>2005 baseline</figcaption></figure>
-<figure><img src="builtup_2010.png" alt="GHSL built-up surface in 2010"><figcaption>2010</figcaption></figure>
-<figure><img src="builtup_2015.png" alt="GHSL built-up surface in 2015"><figcaption>2015</figcaption></figure>
-<figure><img src="builtup_2020.png" alt="GHSL built-up surface in 2020"><figcaption>2020</figcaption></figure></div></section>
-<section class="card"><h2>4. Spatial change relative to the 2005 footprint</h2><div class="grid">
-<figure><img src="net_change_2005_2020.png" alt="Net built-up surface change from 2005 to 2020"><figcaption>Net change: 2020 minus 2005. Blue indicates negative change, white is near zero, and red indicates positive change.</figcaption></figure>
-<figure><img src="positive_expansion_2005_2020.png" alt="Positive built-up expansion from 2005 to 2020"><figcaption>Positive expansion only: negative differences are set to zero.</figcaption></figure></div></section>
+<figure><img src="Jaipur_GHSL_builtup_2005.png" alt="GHSL built-up surface in 2005"><figcaption>2005 baseline</figcaption></figure>
+<figure><img src="Jaipur_GHSL_builtup_2010.png" alt="GHSL built-up surface in 2010"><figcaption>2010</figcaption></figure>
+<figure><img src="Jaipur_GHSL_builtup_2015.png" alt="GHSL built-up surface in 2015"><figcaption>2015</figcaption></figure>
+<figure><img src="Jaipur_GHSL_builtup_2020.png" alt="GHSL built-up surface in 2020"><figcaption>2020</figcaption></figure></div></section>
+<section class="card"><h2>4. Positive expansion relative to 2005</h2>
+<p>Each map shows only positive pixel-level change in GHSL built-up surface relative to the 2005 baseline; zero and negative differences are set to zero.</p>
+<div class="grid">
+<figure><img src="Jaipur_GHSL_expansion_2010_minus_2005.png" alt="Positive GHSL built-up expansion from 2005 to 2010"><figcaption>Positive expansion: 2010 − 2005</figcaption></figure>
+<figure><img src="Jaipur_GHSL_expansion_2015_minus_2005.png" alt="Positive GHSL built-up expansion from 2005 to 2015"><figcaption>Positive expansion: 2015 − 2005</figcaption></figure>
+<figure><img src="Jaipur_GHSL_expansion_2020_minus_2005.png" alt="Positive GHSL built-up expansion from 2005 to 2020"><figcaption>Positive expansion: 2020 − 2005</figcaption></figure></div></section>
 <section class="card"><h2>5. Dedicated positive-expansion map</h2>
 <p><b>Question 2 focus:</b> This map isolates the locations where mapped built-up surface increased between the 2005 baseline and 2020. Only positive differences are retained; cells with zero or negative change are shown as no expansion.</p>
-<figure style="max-width:950px;margin:0 auto;"><img src="positive_expansion_2005_2020.png" alt="Dedicated positive built-up expansion map for Jaipur, 2005 to 2020"><figcaption><b>Figure: Positive built-up-surface expansion, 2005–2020.</b> Warm colours indicate larger positive change in mapped built-up surface per 100 m grid cell. The cyan outline marks the Jaipur ULB boundary.</figcaption></figure>
 <h3>Interactive positive-expansion map</h3>
 <p>Use the interactive map below to pan, zoom, inspect the layer, and view the spatial pattern of positive expansion.</p>
 <iframe src="Jaipur_GHSL_Positive_Expansion_2005_2020.html" width="100%" height="700" style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;" title="Jaipur positive built-up expansion interactive map"></iframe>
 <p><a href="Jaipur_GHSL_Positive_Expansion_2005_2020.html" target="_blank" rel="noopener">Open interactive positive-expansion map in a new tab ↗</a></p>
 <div class="note"><b>How to read this map:</b> The map shows <i>where</i> the GHSL built-up-surface measurement increased relative to 2005. It does not identify the exact construction year, building type, or cause of development. Directional growth claims should be made only after visually inspecting the rendered map.</div>
 </section>
-<section class="card"><h2>6. Numerical summary</h2><table class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>year</th>
-      <th>built_surface_km2_equivalent</th>
-      <th>change_from_2005_km2_equivalent</th>
-      <th>percent_change_from_2005</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>2005</td>
-      <td>24.60</td>
-      <td>0.00</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <td>2010</td>
-      <td>25.69</td>
-      <td>1.09</td>
-      <td>4.44</td>
-    </tr>
-    <tr>
-      <td>2015</td>
-      <td>26.78</td>
-      <td>2.19</td>
-      <td>8.90</td>
-    </tr>
-    <tr>
-      <td>2020</td>
-      <td>27.50</td>
-      <td>2.90</td>
-      <td>11.79</td>
-    </tr>
-  </tbody>
-</table><div style="margin-top:18px"><img src="builtup_timeseries.png" alt="Jaipur GHSL built-up surface time series"></div></section>
+<section class="card"><h2>6. Numerical summary</h2>
+<h3>Total built-up surface and net change from 2005</h3>
+<p>Built-up surface is summed from the GHSL <code>built_surface</code> band within the Jaipur ULB. “km²-equivalent” is the summed square-metre measurement divided by 1,000,000.</p>
+<div style="overflow-x:auto"><table>
+<thead><tr><th>Epoch</th><th>Total built-up surface (m²)</th><th>Total (km²-equivalent)</th><th>Net change from 2005 (m²)</th><th>Net change from 2005 (%)</th></tr></thead>
+<tbody>
+<tr><td>2005</td><td>24,595,251.11</td><td>24.60</td><td>0.00</td><td>0.00</td></tr>
+<tr><td>2010</td><td>25,687,886.75</td><td>25.69</td><td>1,092,635.64</td><td>4.44</td></tr>
+<tr><td>2015</td><td>26,784,586.17</td><td>26.78</td><td>2,189,335.06</td><td>8.90</td></tr>
+<tr><td>2020</td><td>27,496,199.93</td><td>27.50</td><td>2,900,948.82</td><td>11.79</td></tr>
+</tbody></table></div>
+<h3>Positive built-up increase relative to 2005</h3>
+<p>Positive increase is the sum of per-cell increases after negative differences are set to zero. In the notebook’s returned results, the summed decrease is 0 m² for each comparison, so positive increase equals net change.</p>
+<div style="overflow-x:auto"><table>
+<thead><tr><th>Comparison</th><th>Positive increase (m²)</th><th>Positive increase (ha)</th><th>Decrease (m²)</th><th>Net change (m²)</th></tr></thead>
+<tbody>
+<tr><td>2010 − 2005</td><td>1,092,635.64</td><td>109.26</td><td>0.00</td><td>1,092,635.64</td></tr>
+<tr><td>2015 − 2005</td><td>2,189,335.06</td><td>218.93</td><td>0.00</td><td>2,189,335.06</td></tr>
+<tr><td>2020 − 2005</td><td>2,900,948.82</td><td>290.09</td><td>0.00</td><td>2,900,948.82</td></tr>
+</tbody></table></div>
+<div class="note" style="margin-top:16px"><b>Interpretation:</b> These totals are summed GHSL built-up-surface measurements, not Jaipur's administrative land area or the area of newly constructed building footprints.</div></section>
 <section class="card"><h2>7. Formulas and numerical calculations</h2>
 <p>The following equations show exactly how the numerical results in this analysis are calculated from the GHSL <code>built_surface</code> values.</p>
-<h3>5.1 Convert built-up surface from m² to km²-equivalent</h3>
+<h3>7.1 Convert built-up surface from m² to km²-equivalent</h3>
 <div class="formula-box">
 <div class="formula"><b>Formula:</b>&nbsp; B<sub>km²</sub> = B<sub>m²</sub> ÷ 1,000,000</div>
 <p><b>Why 1,000,000?</b> 1 km = 1,000 m, therefore 1 km² = 1,000 × 1,000 = 1,000,000 m².</p>
 <div class="calculation"><b>2005 numerical calculation:</b><br>
-B<sub>2005</sub> = 24,595,251 m²<br>
-24,595,251 ÷ 1,000,000 = <span class="result">24.60 km²-equivalent</span></div>
+B<sub>2005</sub> = 24,595,251.11 m²<br>
+24,595,251.11 ÷ 1,000,000 = <span class="result">24.60 km²-equivalent</span></div>
 </div>
-<h3>5.2 Absolute change from 2005 to 2020</h3>
+<h3>7.2 Absolute change from 2005 to 2020</h3>
 <div class="formula-box">
 <div class="formula"><b>Formula:</b>&nbsp; ΔB = B<sub>2020</sub> − B<sub>2005</sub></div>
 <div class="calculation"><b>Numerical calculation:</b><br>
-27.50 − 24.60 = <span class="result">2.90 km²-equivalent</span><br><br>
-Using square metres:<br>
-27,496,200 − 24,595,251 = <span class="result">2,900,949 m²</span></div>
+27.50 − 24.60 ≈ <span class="result">2.90 km²-equivalent</span><br><br>
+Using the unrounded notebook values:<br>
+27,496,199.93 − 24,595,251.11 = <span class="result">2,900,948.82 m²</span></div>
 </div>
-<h3>5.3 Percentage change relative to the 2005 baseline</h3>
+<h3>7.3 Percentage change relative to the 2005 baseline</h3>
 <div class="formula-box">
 <div class="formula"><b>Formula:</b>&nbsp; %ΔB = <span class="fraction"><span class="top">B<sub>2020</sub> − B<sub>2005</sub></span><span class="bottom">B<sub>2005</sub></span></span> × 100</div>
 <div class="calculation"><b>Numerical calculation:</b><br>
-<span class="fraction"><span class="top">27.50 − 24.60</span><span class="bottom">24.60</span></span> × 100 = <span class="result">11.79%</span></div>
+<span class="fraction"><span class="top">2,900,948.82</span><span class="bottom">24,595,251.11</span></span> × 100 = <span class="result">11.79%</span></div>
 </div>
-<h3>5.4 Net spatial change per 100 m grid cell</h3>
+<h3>7.4 Net spatial change per 100 m grid cell</h3>
 <div class="formula-box">
 <div class="formula"><b>Formula:</b>&nbsp; Δ<sub>i</sub> = B<sub>2020,i</sub> − B<sub>2005,i</sub></div>
 <p>Here <b>i</b> represents an individual 100 m × 100 m GHSL grid cell. A positive value means mapped built-up surface increased in that cell; a negative value means it decreased.</p>
 </div>
-<h3>5.5 Positive expansion only</h3>
+<h3>7.5 Positive expansion only</h3>
 <div class="formula-box">
 <div class="formula"><b>Formula:</b>&nbsp; E<sub>i</sub> = max(Δ<sub>i</sub>, 0)</div>
 <p>This keeps only positive changes and sets negative changes to zero.</p>
@@ -149,8 +137,29 @@ Therefore E<sub>i</sub> = max(−2,000, 0) = <span class="result">0 m²</span>.<
 </div>
 <div class="note"><b>Important:</b> The km²-equivalent values are summed GHSL built-up-surface measurements. They are not Jaipur's total administrative land area and should not be described as the physical area of newly constructed buildings.</div>
 </section>
-<section class="card"><h2>8. Methodology</h2><p>This study uses the Global Human Settlement Layer (GHSL) built-up surface product accessed in Google Earth Engine through <code>JRC/GHSL/P2023A/GHS_BUILT_S</code>. The <code>built_surface</code> band represents square metres of built-up surface per 100 m grid cell. The 2005, 2010, 2015 and 2020 epoch images were clipped to the <b>JAIPUR</b> Urban Local Body selected from the <code>SBM_ULBs</code> dataset.</p><p>The same boundary, band, nominal scale and visualization range were used for all epochs. Net change was calculated as 2020 minus 2005, and positive expansion was isolated by setting negative differences to zero.</p></section>
-<section class="card"><h2>9. Results and discussion</h2><p>The GHSL results show a clear overall increase in mapped built-up surface within the Jaipur ULB between 2005 and 2020. The summed built-up surface rose from approximately <b>86.13 km2-equivalent in 2005</b> to <b>121.50 km2-equivalent in 2020</b>, an increase of approximately <b>35.37 km2-equivalent, or 41.06%</b>.</p><p>The intermediate epochs also show continued growth: 100.32 km2-equivalent in 2010 and 114.44 km2-equivalent in 2015. The positive-expansion map identifies locations where mapped built-up surface increased relative to the 2005 baseline. Directional claims should be made only from the rendered map.</p><div class="note"><b>Interpretation caution:</b> 41.06% refers to the increase in the summed GHSL built-up-surface measurement, not a 41.06% increase in Jaipur's total administrative land area.</div></section>
-<section class="card"><h2>10. Limitations</h2><ol><li>Five-year epochs do not provide annual construction dates.</li><li>100 m spatial resolution is not a building-footprint inventory.</li><li><code>built_surface</code> is built-up surface within grid cells, not individual building footprints.</li><li>Statistics depend on the selected Jaipur ULB boundary.</li><li>Differences can include estimation/classification uncertainty.</li><li>The difference map does not establish the exact date, cause, or type of development.</li></ol></section>
+<section class="card"><h2>8. Methodology</h2>
+<p>This study uses the Global Human Settlement Layer (GHSL) built-up surface product accessed in Google Earth Engine through <code>JRC/GHSL/P2023A/GHS_BUILT_S</code>. The <code>built_surface</code> band represents square metres of built-up surface per 100 m grid cell. The 2005, 2010, 2015 and 2020 epoch images were clipped to the <b>JAIPUR</b> Urban Local Body selected from the <code>SBM_ULBs</code> dataset in the Indian administrative-boundaries urban release.</p>
+<p>The same boundary, band, nominal scale and visualization range were used for all epochs. No seasonal-window or cloud-quality filter was required because the assigned GHSL product is an epoch-based built-surface dataset rather than a cloud-prone monthly optical/Sentinel series. An interactive time slider and labelled GIF show the four available epochs. Net change was calculated as 2020 minus 2005, and positive expansion was isolated by setting negative differences to zero. Total mapped built-up surface was estimated by summing <code>built_surface</code> within the Jaipur boundary for each epoch.</p></section>
+<section class="card"><h2>9. Results and discussion</h2>
+<h3>Results</h3>
+<ul>
+<li><b>2005:</b> 24.60 km²-equivalent of mapped built-up surface.</li>
+<li><b>2010:</b> 25.69 km²-equivalent (<b>+4.44%</b> relative to 2005).</li>
+<li><b>2015:</b> 26.78 km²-equivalent (<b>+8.90%</b> relative to 2005).</li>
+<li><b>2020:</b> 27.50 km²-equivalent (<b>+11.79%</b> relative to 2005).</li>
+<li><b>2005–2020 absolute increase:</b> 2.90 km²-equivalent.</li>
+</ul>
+<h3>Discussion</h3>
+<p>The GHSL results show a clear overall increase in mapped built-up surface within the Jaipur ULB between 2005 and 2020. The summed built-up surface rose from approximately <b>24.60 km²-equivalent in 2005 to 27.50 km²-equivalent in 2020</b>, an increase of approximately <b>2.90 km²-equivalent, or 11.79%</b>. The intermediate epochs also show continued growth, reaching 25.69 km²-equivalent in 2010 and 26.78 km²-equivalent in 2015. Thus, the temporal pattern is an overall increase across all four available epochs rather than a single end-period jump.</p>
+<p>The positive-expansion map identifies the locations where mapped built-up surface increased relative to the 2005 baseline. The strongest spatial clusters should be described from the rendered map itself. Directional claims such as northern, southern, eastern or western expansion should only be made when clearly supported by the map. The time slider and GIF provide a visual way to examine how the mapped built-up pattern evolves between the four five-year epochs.</p>
+<div class="note"><b>Interpretation caution:</b> 11.79% refers to the increase in the <b>summed GHSL built-up-surface measurement</b>, not an 11.79% increase in Jaipur's total administrative land area. The km²-equivalent is the summed built-up surface divided by one million.</div></section>
+<section class="card"><h2>10. Limitations</h2><ol>
+<li><b>Temporal resolution:</b> GHSL provides five-year epochs in this analysis, so the result is not an annual time series and exact construction dates cannot be inferred.</li>
+<li><b>Spatial resolution:</b> the product uses a 100 m grid; small or fragmented developments may not be represented at building scale.</li>
+<li><b>Measurement meaning:</b> <code>built_surface</code> is built-up surface within grid cells, not a vector inventory of individual building footprints.</li>
+<li><b>Boundary dependence:</b> all statistics depend on the selected Jaipur ULB boundary; a district, ward, or different municipal boundary would produce different totals.</li>
+<li><b>Uncertainty:</b> observed differences can include dataset estimation/classification uncertainty as well as genuine land-development change.</li>
+<li><b>Change interpretation:</b> a positive difference between compared epochs indicates increased mapped built-up surface, but the difference map alone does not establish the exact date, cause, or type of development.</li>
+</ol></section>
 <section class="card"><h2>11. Data acknowledgement</h2><p>Global Human Settlement Layer (GHSL), European Commission Joint Research Centre, GHS-BUILT-S R2023A. Jaipur ULB boundary: <code>SBM_ULBs</code> from <code>ramSeraph/indian_admin_boundaries</code>, urban release.</p></section>
 <p class="footer">Generated from the Jaipur GHSL Built-up Surface Expansion notebook.</p></main></body></html>
