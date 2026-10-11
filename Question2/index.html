@@ -25,6 +25,26 @@ h2 { margin:0 0 8px; }
 figure { margin:0; } img { max-width:100%; width:100%; height:auto; border:1px solid #dce7e4; border-radius:10px; background:#fff; }
 .animation { display:block; width:min(100%,640px); margin:0 auto; }
 figcaption { color:#52636d; font-size:.9rem; margin-top:7px; }
+.chart-card { margin-top:20px; padding:18px; border:1px solid #dce7e4; border-radius:12px; background:linear-gradient(145deg,#f7fbfa,#eef6f4); }
+.chart-toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.chart-toolbar p { margin:0; color:#52636d; }
+.chart-toggle { display:inline-flex; gap:4px; padding:4px; border:1px solid #d4e2de; border-radius:10px; background:white; }
+.chart-toggle button { padding:8px 12px; border:0; border-radius:7px; background:transparent; color:#40545b; font:inherit; font-size:.9rem; cursor:pointer; }
+.chart-toggle button[aria-pressed="true"] { background:#176d60; color:white; }
+.chart-toggle button:focus-visible,.chart-point:focus-visible { outline:3px solid #f5a623; outline-offset:3px; }
+.chart-wrap { overflow:hidden; border:1px solid #e0eae7; border-radius:10px; background:white; }
+.chart-svg { display:block; width:100%; height:auto; }
+.chart-grid { stroke:#e5eeeb; stroke-width:1; }
+.chart-axis { fill:#52636d; font:13px "Segoe UI",Arial,sans-serif; }
+.chart-axis-title { fill:#344951; font:600 13px "Segoe UI",Arial,sans-serif; }
+.chart-area { fill:url(#chart-fill); }
+.chart-line { fill:none; stroke:#167c70; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+.chart-point { fill:#fff; stroke:#167c70; stroke-width:4; cursor:pointer; transition:r .15s ease,fill .15s ease; }
+.chart-point:hover,.chart-point.is-active { r:8; fill:#f5a623; }
+.chart-readout { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px; min-height:52px; margin-top:12px; padding:12px 14px; border-radius:9px; background:#123b3a; color:white; }
+.chart-readout strong { font-size:1.2rem; }
+.chart-readout span { color:#d5e7e2; }
+@media (prefers-reduced-motion:reduce) { .chart-point { transition:none; } }
 table { border-collapse:collapse; width:100%; } th,td { border:1px solid #dce7e4; padding:10px; text-align:right; } th { text-align:center; background:#f3f7f6; }
 .note { background:#fff8e1; border-left:4px solid #f9ab00; padding:12px 15px; } .missing { color:#a00; }
 .formula-box { background:#f8f9fa; border:1px solid #dfe1e5; border-radius:10px; padding:16px 18px; margin:12px 0 18px; overflow-x:auto; }
@@ -94,6 +114,30 @@ iframe { border-color:#dce7e4 !important; }
 <tr><td>2015 − 2005</td><td>2,189,335.06</td><td>218.93</td><td>0.00</td><td>2,189,335.06</td></tr>
 <tr><td>2020 − 2005</td><td>2,900,948.82</td><td>290.09</td><td>0.00</td><td>2,900,948.82</td></tr>
 </tbody></table></div>
+<section class="chart-card" aria-labelledby="timeseries-title">
+<div class="chart-toolbar">
+<div><h3 id="timeseries-title">Jaipur built-up surface over time</h3><p>Hover over or select a point to inspect its value.</p></div>
+<div class="chart-toggle" role="group" aria-label="Choose chart measure">
+<button type="button" data-chart-mode="surface" aria-pressed="true">Built-up surface</button>
+<button type="button" data-chart-mode="change" aria-pressed="false">Change from 2005</button>
+</div>
+</div>
+<div class="chart-wrap">
+<svg class="chart-svg" viewBox="0 0 800 410" role="img" aria-labelledby="chart-svg-title chart-svg-desc">
+<title id="chart-svg-title">Jaipur GHSL built-up surface, 2005 to 2020</title>
+<desc id="chart-svg-desc">Interactive line chart. Select a year point to view the exact value.</desc>
+<defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#4db6a5" stop-opacity=".28"/><stop offset="100%" stop-color="#4db6a5" stop-opacity=".02"/></linearGradient></defs>
+<g class="chart-grid-lines"></g><g class="chart-y-labels"></g>
+<path class="chart-area"></path><path class="chart-line"></path><g class="chart-points"></g>
+<g class="chart-x-labels"></g>
+<text class="chart-axis-title chart-y-title" x="24" y="190" text-anchor="middle" transform="rotate(-90 24 190)">Summed built-up surface (km²-equivalent)</text>
+<text class="chart-axis-title" x="400" y="398" text-anchor="middle">GHSL epoch</text>
+</svg>
+</div>
+<div class="chart-readout" aria-live="polite"><strong data-readout-value>27.50 km²-equivalent</strong><span data-readout-detail>2020 · +11.79% from 2005</span></div>
+<p class="subtitle" style="margin:10px 0 0">Source: the saved <code>total_stats</code> results in this notebook.</p>
+</section>
+<p><a href="Jaipur_GHSL_builtup_timeseries.png" download>Download the original chart (PNG)</a></p>
 <div class="note" style="margin-top:16px"><b>Interpretation:</b> These totals are summed GHSL built-up-surface measurements, not Jaipur's administrative land area or the area of newly constructed building footprints.</div></section>
 <section class="card"><h2>7. Formulas and numerical calculations</h2>
 <p>The following equations show exactly how the numerical results in this analysis are calculated from the GHSL <code>built_surface</code> values.</p>
@@ -162,4 +206,115 @@ Therefore E<sub>i</sub> = max(−2,000, 0) = <span class="result">0 m²</span>.<
 <li><b>Change interpretation:</b> a positive difference between compared epochs indicates increased mapped built-up surface, but the difference map alone does not establish the exact date, cause, or type of development.</li>
 </ol></section>
 <section class="card"><h2>11. Data acknowledgement</h2><p>Global Human Settlement Layer (GHSL), European Commission Joint Research Centre, GHS-BUILT-S R2023A. Jaipur ULB boundary: <code>SBM_ULBs</code> from <code>ramSeraph/indian_admin_boundaries</code>, urban release.</p></section>
-<p class="footer">Generated from the Jaipur GHSL Built-up Surface Expansion notebook.</p></main></body></html>
+<p class="footer">Generated from the Jaipur GHSL Built-up Surface Expansion notebook.</p></main>
+<script>
+(() => {
+  const data = [
+    { year: 2005, surface: 24.59525111, change: 0, percent: 0 },
+    { year: 2010, surface: 25.68788675, change: 1.09263564, percent: 4.44 },
+    { year: 2015, surface: 26.78458617, change: 2.18933506, percent: 8.90 },
+    { year: 2020, surface: 27.49619993, change: 2.90094882, percent: 11.79 },
+  ];
+  const svg = document.querySelector(".chart-svg");
+  const grid = svg.querySelector(".chart-grid-lines");
+  const yLabels = svg.querySelector(".chart-y-labels");
+  const xLabels = svg.querySelector(".chart-x-labels");
+  const pointsGroup = svg.querySelector(".chart-points");
+  const line = svg.querySelector(".chart-line");
+  const area = svg.querySelector(".chart-area");
+  const yTitle = svg.querySelector(".chart-y-title");
+  const readoutValue = document.querySelector("[data-readout-value]");
+  const readoutDetail = document.querySelector("[data-readout-detail]");
+  const modeButtons = [...document.querySelectorAll("[data-chart-mode]")];
+  const xPositions = [120, 305, 490, 675];
+  const plot = { top: 48, bottom: 330 };
+  let mode = "surface";
+  let selectedIndex = data.length - 1;
+  const ns = "http://www.w3.org/2000/svg";
+
+  function element(name, attributes = {}) {
+    const node = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value);
+    return node;
+  }
+
+  function setReadout(index) {
+    selectedIndex = index;
+    const item = data[index];
+    const isSurface = mode === "surface";
+    const value = isSurface ? item.surface : item.change;
+    readoutValue.textContent = isSurface
+      ? `${value.toFixed(2)} km²-equivalent`
+      : `${value.toFixed(2)} km²-equivalent`;
+    readoutDetail.textContent = isSurface
+      ? `${item.year} · ${item.percent === 0 ? "baseline" : `+${item.percent.toFixed(2)}% from 2005`}`
+      : `${item.year} · ${item.percent === 0 ? "baseline" : `+${item.percent.toFixed(2)}% from 2005`}`;
+    pointsGroup.querySelectorAll(".chart-point").forEach((point, pointIndex) => {
+      point.classList.toggle("is-active", pointIndex === index);
+    });
+  }
+
+  function draw() {
+    const isSurface = mode === "surface";
+    const values = data.map(item => isSurface ? item.surface : item.change);
+    const min = isSurface ? 24 : 0;
+    const max = isSurface ? 28 : 3.2;
+    const ticks = isSurface ? [24, 25, 26, 27, 28] : [0, 0.8, 1.6, 2.4, 3.2];
+    const y = value => plot.bottom - ((value - min) / (max - min)) * (plot.bottom - plot.top);
+
+    grid.replaceChildren();
+    yLabels.replaceChildren();
+    xLabels.replaceChildren();
+    pointsGroup.replaceChildren();
+    ticks.forEach(tick => {
+      const tickY = y(tick);
+      grid.append(element("line", { x1: 82, x2: 730, y1: tickY, y2: tickY, class: "chart-grid" }));
+      const label = element("text", { x: 70, y: tickY + 4, "text-anchor": "end", class: "chart-axis" });
+      label.textContent = tick.toFixed(1);
+      yLabels.append(label);
+    });
+
+    const coords = values.map((value, index) => [xPositions[index], y(value)]);
+    const path = coords.map(([x, pointY], index) => `${index ? "L" : "M"} ${x} ${pointY}`).join(" ");
+    line.setAttribute("d", path);
+    area.setAttribute("d", `${path} L ${coords[coords.length - 1][0]} ${plot.bottom} L ${coords[0][0]} ${plot.bottom} Z`);
+    data.forEach((item, index) => {
+      const [x, pointY] = coords[index];
+      const point = element("circle", {
+        cx: x, cy: pointY, r: 6, class: "chart-point", tabindex: 0, role: "button",
+        "aria-label": `${item.year}: ${values[index].toFixed(2)} ${isSurface ? "km²-equivalent built-up surface" : "km²-equivalent change"}; ${item.percent.toFixed(2)} percent change from 2005`,
+      });
+      point.addEventListener("mouseenter", () => setReadout(index));
+      point.addEventListener("focus", () => setReadout(index));
+      point.addEventListener("click", () => setReadout(index));
+      point.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setReadout(index);
+        }
+      });
+      pointsGroup.append(point);
+      const yearLabel = element("text", { x, y: 356, "text-anchor": "middle", class: "chart-axis" });
+      yearLabel.textContent = item.year;
+      xLabels.append(yearLabel);
+    });
+
+    yTitle.textContent = isSurface
+      ? "Summed built-up surface (km²-equivalent)"
+      : "Net change from 2005 (km²-equivalent)";
+    modeButtons.forEach(button => {
+      button.setAttribute("aria-pressed", String(button.dataset.chartMode === mode));
+    });
+    setReadout(selectedIndex);
+  }
+
+  modeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      mode = button.dataset.chartMode;
+      draw();
+    });
+  });
+  draw();
+})();
+</script>
+</body></html>
