@@ -1,320 +1,72 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jaipur Built-up Surface Expansion | 2005-2020</title>
-<style>
-:root { font-family:Inter,"Segoe UI",Arial,sans-serif; color:#172b3a; background:#f3f7f6; font-synthesis:none; text-rendering:optimizeLegibility; }
-* { box-sizing:border-box; }
-body { margin:0; line-height:1.6; }
-.container { width:min(1120px,calc(100% - 40px)); margin:0 auto; padding:30px 0 54px; }
-header { padding:38px 0 30px; color:white; background:#123b3a; }
-.back { color:#bde3d8; font-weight:650; text-decoration:none; }
-.back:hover,.back:focus-visible { text-decoration:underline; }
-.eyebrow { margin:26px 0 8px; color:#a9d8ca; font-size:.82rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
-h1 { max-width:850px; margin:0; font-size:clamp(2rem,5vw,3.5rem); line-height:1.12; }
-header p:last-child { max-width:760px; margin:16px 0 0; color:#d5e7e2; font-size:1.05rem; }
-.hero,.card { padding:22px 24px; border:1px solid #dce7e4; border-radius:14px; background:white; box-shadow:0 10px 28px #173b3a0b; }
-.hero,.card { margin-bottom:20px; }
-.hero { color:#172b3a; }
-.notebook-link { display:inline-block; margin-top:8px; padding:10px 14px; border-radius:8px; background:#176d60; color:white; font-weight:700; text-decoration:none; }
-.notebook-link:hover,.notebook-link:focus-visible { background:#10564c; outline:3px solid #9ed8c9; outline-offset:2px; }
-.subtitle,.footer { color:#64747b; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; margin-bottom:20px; }
-.grid .card { margin:0; }
-h2 { margin:0 0 8px; }
-.metric { font-size:1.8rem; font-weight:700; } .label { color:#52636d; font-size:.9rem; }
-figure { margin:0; } img { max-width:100%; width:100%; height:auto; border:1px solid #dce7e4; border-radius:10px; background:#fff; }
-.animation { display:block; width:min(100%,640px); margin:0 auto; }
-figcaption { color:#52636d; font-size:.9rem; margin-top:7px; }
-.chart-card { margin-top:20px; padding:18px; border:1px solid #dce7e4; border-radius:12px; background:linear-gradient(145deg,#f7fbfa,#eef6f4); }
-.chart-toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
-.chart-toolbar p { margin:0; color:#52636d; }
-.chart-toggle { display:inline-flex; gap:4px; padding:4px; border:1px solid #d4e2de; border-radius:10px; background:white; }
-.chart-toggle button { padding:8px 12px; border:0; border-radius:7px; background:transparent; color:#40545b; font:inherit; font-size:.9rem; cursor:pointer; }
-.chart-toggle button[aria-pressed="true"] { background:#176d60; color:white; }
-.chart-toggle button:focus-visible,.chart-point:focus-visible { outline:3px solid #f5a623; outline-offset:3px; }
-.chart-wrap { overflow:hidden; border:1px solid #e0eae7; border-radius:10px; background:white; }
-.chart-svg { display:block; width:100%; height:auto; }
-.chart-grid { stroke:#e5eeeb; stroke-width:1; }
-.chart-axis { fill:#52636d; font:13px "Segoe UI",Arial,sans-serif; }
-.chart-axis-title { fill:#344951; font:600 13px "Segoe UI",Arial,sans-serif; }
-.chart-area { fill:url(#chart-fill); }
-.chart-line { fill:none; stroke:#167c70; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
-.chart-point { fill:#fff; stroke:#167c70; stroke-width:4; cursor:pointer; transition:r .15s ease,fill .15s ease; }
-.chart-point:hover,.chart-point.is-active { r:8; fill:#f5a623; }
-.chart-readout { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px; min-height:52px; margin-top:12px; padding:12px 14px; border-radius:9px; background:#123b3a; color:white; }
-.chart-readout strong { font-size:1.2rem; }
-.chart-readout span { color:#d5e7e2; }
-@media (prefers-reduced-motion:reduce) { .chart-point { transition:none; } }
-table { border-collapse:collapse; width:100%; } th,td { border:1px solid #dce7e4; padding:10px; text-align:right; } th { text-align:center; background:#f3f7f6; }
-.note { background:#fff8e1; border-left:4px solid #f9ab00; padding:12px 15px; } .missing { color:#a00; }
-.formula-box { background:#f8f9fa; border:1px solid #dfe1e5; border-radius:10px; padding:16px 18px; margin:12px 0 18px; overflow-x:auto; }
-.formula { font-family:Georgia,"Times New Roman",serif; font-size:1.18rem; text-align:center; margin:6px 0 14px; color:#202124; }
-.calculation { background:#fff; border-left:4px solid #1a73e8; padding:12px 16px; margin:10px 0; font-family:Georgia,"Times New Roman",serif; font-size:1.08rem; }
-.result { font-weight:700; font-size:1.12rem; }
-.fraction { display:inline-flex; flex-direction:column; vertical-align:middle; text-align:center; line-height:1.15; margin:0 4px; }
-.fraction .top { border-bottom:1px solid #202124; padding:0 6px 3px; } .fraction .bottom { padding:3px 6px 0; }
-.unit { font-family:Arial,sans-serif; font-size:.95em; }
-iframe { border-color:#dce7e4 !important; }
-.footer { padding:0 0 30px; font-size:.9rem; }
-@media (max-width:600px) { .container { width:calc(100% - 24px); padding-top:24px; } .hero,.card { padding:18px; } header { padding-top:26px; } }
-</style></head><body>
-<header><div class="container" style="padding-top:0;padding-bottom:0">
-<a class="back" href="../index.html">← All Questions</a>
-<p class="eyebrow">Question 2</p>
-<h1>Jaipur Built-up Surface Expansion (2005-2020)</h1>
-<p>Explore the GHSL built-up-surface analysis for Jaipur across four five-year epochs: 2005, 2010, 2015, and 2020.</p>
-<p><b>Name:</b> Raushan Vivek &nbsp;|&nbsp; <b>Roll no.:</b> CS25M115</p>
-</div></header>
-<main class="container">
-<section class="hero"><h2>About this analysis</h2>
-<p><b>Assignment:</b> Map the spatial expansion of built-up surface relative to the 2005 footprint.</p>
-<p>This portfolio presents the Question 2 GHSL built-up-surface analysis for the Jaipur Urban Local Body using four five-year epochs: 2005, 2010, 2015 and 2020.</p>
-<a class="notebook-link" href="CS25M115_Q2.ipynb" download>Download notebook (.ipynb)</a></section>
-<section class="card"><h2>1. Interactive time-slider map</h2>
-<p>Use the time slider to compare the GHSL built-up surface across the 2005, 2010, 2015 and 2020 epochs.</p>
-<iframe src="Jaipur_GHSL_TimeSlider_2005_2020.html" width="100%" height="700" style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;" title="Jaipur GHSL interactive time slider"></iframe>
-</section>
-<section class="card"><h2>2. Temporal animation</h2><img class="animation" src="Jaipur_GHSL_builtup_2005_2020_labelled.gif" alt="Labelled GHSL built-up surface animation from 2005 to 2020"></section>
-<section class="card"><h2>3. Built-up surface maps by epoch</h2><div class="grid">
-<figure><img src="Jaipur_GHSL_builtup_2005.png" alt="GHSL built-up surface in 2005"><figcaption>2005 baseline</figcaption></figure>
-<figure><img src="Jaipur_GHSL_builtup_2010.png" alt="GHSL built-up surface in 2010"><figcaption>2010</figcaption></figure>
-<figure><img src="Jaipur_GHSL_builtup_2015.png" alt="GHSL built-up surface in 2015"><figcaption>2015</figcaption></figure>
-<figure><img src="Jaipur_GHSL_builtup_2020.png" alt="GHSL built-up surface in 2020"><figcaption>2020</figcaption></figure></div></section>
-<section class="card"><h2>4. Positive expansion relative to 2005</h2>
-<p>Each map shows only positive pixel-level change in GHSL built-up surface relative to the 2005 baseline; zero and negative differences are set to zero.</p>
-<div class="grid">
-<figure><img src="Jaipur_GHSL_expansion_2010_minus_2005.png" alt="Positive GHSL built-up expansion from 2005 to 2010"><figcaption>Positive expansion: 2010 − 2005</figcaption></figure>
-<figure><img src="Jaipur_GHSL_expansion_2015_minus_2005.png" alt="Positive GHSL built-up expansion from 2005 to 2015"><figcaption>Positive expansion: 2015 − 2005</figcaption></figure>
-<figure><img src="Jaipur_GHSL_expansion_2020_minus_2005.png" alt="Positive GHSL built-up expansion from 2005 to 2020"><figcaption>Positive expansion: 2020 − 2005</figcaption></figure></div></section>
-<section class="card"><h2>5. Dedicated positive-expansion map</h2>
-<p><b>Question 2 focus:</b> This map isolates the locations where mapped built-up surface increased between the 2005 baseline and 2020. Only positive differences are retained; cells with zero or negative change are shown as no expansion.</p>
-<h3>Interactive positive-expansion map</h3>
-<p>Use the interactive map below to pan, zoom, inspect the layer, and view the spatial pattern of positive expansion.</p>
-<iframe src="Jaipur_GHSL_Positive_Expansion_2005_2020.html" width="100%" height="700" style="border:1px solid #e0e0e0;border-radius:10px;background:#fff;" title="Jaipur positive built-up expansion interactive map"></iframe>
-<p><a href="Jaipur_GHSL_Positive_Expansion_2005_2020.html" target="_blank" rel="noopener">Open interactive positive-expansion map in a new tab ↗</a></p>
-<div class="note"><b>How to read this map:</b> The map shows <i>where</i> the GHSL built-up-surface measurement increased relative to 2005. It does not identify the exact construction year, building type, or cause of development. Directional growth claims should be made only after visually inspecting the rendered map.</div>
-</section>
-<section class="card"><h2>6. Numerical summary</h2>
-<h3>Total built-up surface and net change from 2005</h3>
-<p>Built-up surface is summed from the GHSL <code>built_surface</code> band within the Jaipur ULB. “km²-equivalent” is the summed square-metre measurement divided by 1,000,000.</p>
-<div style="overflow-x:auto"><table>
-<thead><tr><th>Epoch</th><th>Total built-up surface (m²)</th><th>Total (km²-equivalent)</th><th>Net change from 2005 (m²)</th><th>Net change from 2005 (%)</th></tr></thead>
-<tbody>
-<tr><td>2005</td><td>24,595,251.11</td><td>24.60</td><td>0.00</td><td>0.00</td></tr>
-<tr><td>2010</td><td>25,687,886.75</td><td>25.69</td><td>1,092,635.64</td><td>4.44</td></tr>
-<tr><td>2015</td><td>26,784,586.17</td><td>26.78</td><td>2,189,335.06</td><td>8.90</td></tr>
-<tr><td>2020</td><td>27,496,199.93</td><td>27.50</td><td>2,900,948.82</td><td>11.79</td></tr>
-</tbody></table></div>
-<h3>Positive built-up increase relative to 2005</h3>
-<p>Positive increase is the sum of per-cell increases after negative differences are set to zero. In the notebook’s returned results, the summed decrease is 0 m² for each comparison, so positive increase equals net change.</p>
-<div style="overflow-x:auto"><table>
-<thead><tr><th>Comparison</th><th>Positive increase (m²)</th><th>Positive increase (ha)</th><th>Decrease (m²)</th><th>Net change (m²)</th></tr></thead>
-<tbody>
-<tr><td>2010 − 2005</td><td>1,092,635.64</td><td>109.26</td><td>0.00</td><td>1,092,635.64</td></tr>
-<tr><td>2015 − 2005</td><td>2,189,335.06</td><td>218.93</td><td>0.00</td><td>2,189,335.06</td></tr>
-<tr><td>2020 − 2005</td><td>2,900,948.82</td><td>290.09</td><td>0.00</td><td>2,900,948.82</td></tr>
-</tbody></table></div>
-<section class="chart-card" aria-labelledby="timeseries-title">
-<div class="chart-toolbar">
-<div><h3 id="timeseries-title">Jaipur built-up surface over time</h3><p>Hover over or select a point to inspect its value.</p></div>
-<div class="chart-toggle" role="group" aria-label="Choose chart measure">
-<button type="button" data-chart-mode="surface" aria-pressed="true">Built-up surface</button>
-<button type="button" data-chart-mode="change" aria-pressed="false">Change from 2005</button>
-</div>
-</div>
-<div class="chart-wrap">
-<svg class="chart-svg" viewBox="0 0 800 410" role="img" aria-labelledby="chart-svg-title chart-svg-desc">
-<title id="chart-svg-title">Jaipur GHSL built-up surface, 2005 to 2020</title>
-<desc id="chart-svg-desc">Interactive line chart. Select a year point to view the exact value.</desc>
-<defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#4db6a5" stop-opacity=".28"/><stop offset="100%" stop-color="#4db6a5" stop-opacity=".02"/></linearGradient></defs>
-<g class="chart-grid-lines"></g><g class="chart-y-labels"></g>
-<path class="chart-area"></path><path class="chart-line"></path><g class="chart-points"></g>
-<g class="chart-x-labels"></g>
-<text class="chart-axis-title chart-y-title" x="24" y="190" text-anchor="middle" transform="rotate(-90 24 190)">Summed built-up surface (km²-equivalent)</text>
-<text class="chart-axis-title" x="400" y="398" text-anchor="middle">GHSL epoch</text>
-</svg>
-</div>
-<div class="chart-readout" aria-live="polite"><strong data-readout-value>27.50 km²-equivalent</strong><span data-readout-detail>2020 · +11.79% from 2005</span></div>
-<p class="subtitle" style="margin:10px 0 0">Source: the saved <code>total_stats</code> results in this notebook.</p>
-</section>
-<p><a href="Jaipur_GHSL_builtup_timeseries.png" download>Download the original chart (PNG)</a></p>
-<div class="note" style="margin-top:16px"><b>Interpretation:</b> These totals are summed GHSL built-up-surface measurements, not Jaipur's administrative land area or the area of newly constructed building footprints.</div></section>
-<section class="card"><h2>7. Formulas and numerical calculations</h2>
-<p>The following equations show exactly how the numerical results in this analysis are calculated from the GHSL <code>built_surface</code> values.</p>
-<h3>7.1 Convert built-up surface from m² to km²-equivalent</h3>
-<div class="formula-box">
-<div class="formula"><b>Formula:</b>&nbsp; B<sub>km²</sub> = B<sub>m²</sub> ÷ 1,000,000</div>
-<p><b>Why 1,000,000?</b> 1 km = 1,000 m, therefore 1 km² = 1,000 × 1,000 = 1,000,000 m².</p>
-<div class="calculation"><b>2005 numerical calculation:</b><br>
-B<sub>2005</sub> = 24,595,251.11 m²<br>
-24,595,251.11 ÷ 1,000,000 = <span class="result">24.60 km²-equivalent</span></div>
-</div>
-<h3>7.2 Absolute change from 2005 to 2020</h3>
-<div class="formula-box">
-<div class="formula"><b>Formula:</b>&nbsp; ΔB = B<sub>2020</sub> − B<sub>2005</sub></div>
-<div class="calculation"><b>Numerical calculation:</b><br>
-27.50 − 24.60 ≈ <span class="result">2.90 km²-equivalent</span><br><br>
-Using the unrounded notebook values:<br>
-27,496,199.93 − 24,595,251.11 = <span class="result">2,900,948.82 m²</span></div>
-</div>
-<h3>7.3 Percentage change relative to the 2005 baseline</h3>
-<div class="formula-box">
-<div class="formula"><b>Formula:</b>&nbsp; %ΔB = <span class="fraction"><span class="top">B<sub>2020</sub> − B<sub>2005</sub></span><span class="bottom">B<sub>2005</sub></span></span> × 100</div>
-<div class="calculation"><b>Numerical calculation:</b><br>
-<span class="fraction"><span class="top">2,900,948.82</span><span class="bottom">24,595,251.11</span></span> × 100 = <span class="result">11.79%</span></div>
-</div>
-<h3>7.4 Net spatial change per 100 m grid cell</h3>
-<div class="formula-box">
-<div class="formula"><b>Formula:</b>&nbsp; Δ<sub>i</sub> = B<sub>2020,i</sub> − B<sub>2005,i</sub></div>
-<p>Here <b>i</b> represents an individual 100 m × 100 m GHSL grid cell. A positive value means mapped built-up surface increased in that cell; a negative value means it decreased.</p>
-</div>
-<h3>7.5 Positive expansion only</h3>
-<div class="formula-box">
-<div class="formula"><b>Formula:</b>&nbsp; E<sub>i</sub> = max(Δ<sub>i</sub>, 0)</div>
-<p>This keeps only positive changes and sets negative changes to zero.</p>
-<div class="calculation"><b>Example:</b> If a cell changes from 4,000 m² to 7,000 m²:<br>
-Δ<sub>i</sub> = 7,000 − 4,000 = <span class="result">+3,000 m²</span><br>
-Therefore E<sub>i</sub> = <span class="result">3,000 m²</span>.</div>
-<div class="calculation"><b>Example of a decrease:</b> If a cell changes from 7,000 m² to 5,000 m²:<br>
-Δ<sub>i</sub> = 5,000 − 7,000 = −2,000 m²<br>
-Therefore E<sub>i</sub> = max(−2,000, 0) = <span class="result">0 m²</span>.</div>
-</div>
-<div class="note"><b>Important:</b> The km²-equivalent values are summed GHSL built-up-surface measurements. They are not Jaipur's total administrative land area and should not be described as the physical area of newly constructed buildings.</div>
-</section>
-<section class="card"><h2>8. Methodology</h2>
-<p>This study uses the Global Human Settlement Layer (GHSL) built-up surface product accessed in Google Earth Engine through <code>JRC/GHSL/P2023A/GHS_BUILT_S</code>. The <code>built_surface</code> band represents square metres of built-up surface per 100 m grid cell. The 2005, 2010, 2015 and 2020 epoch images were clipped to the <b>JAIPUR</b> Urban Local Body selected from the <code>SBM_ULBs</code> dataset in the Indian administrative-boundaries urban release.</p>
-<p>The same boundary, band, nominal scale and visualization range were used for all epochs. No seasonal-window or cloud-quality filter was required because the assigned GHSL product is an epoch-based built-surface dataset rather than a cloud-prone monthly optical/Sentinel series. An interactive time slider and labelled GIF show the four available epochs. Net change was calculated as 2020 minus 2005, and positive expansion was isolated by setting negative differences to zero. Total mapped built-up surface was estimated by summing <code>built_surface</code> within the Jaipur boundary for each epoch.</p></section>
-<section class="card"><h2>9. Results and discussion</h2>
-<h3>Results</h3>
-<ul>
-<li><b>2005:</b> 24.60 km²-equivalent of mapped built-up surface.</li>
-<li><b>2010:</b> 25.69 km²-equivalent (<b>+4.44%</b> relative to 2005).</li>
-<li><b>2015:</b> 26.78 km²-equivalent (<b>+8.90%</b> relative to 2005).</li>
-<li><b>2020:</b> 27.50 km²-equivalent (<b>+11.79%</b> relative to 2005).</li>
-<li><b>2005–2020 absolute increase:</b> 2.90 km²-equivalent.</li>
-</ul>
-<h3>Discussion</h3>
-<p>The GHSL results show a clear overall increase in mapped built-up surface within the Jaipur ULB between 2005 and 2020. The summed built-up surface rose from approximately <b>24.60 km²-equivalent in 2005 to 27.50 km²-equivalent in 2020</b>, an increase of approximately <b>2.90 km²-equivalent, or 11.79%</b>. The intermediate epochs also show continued growth, reaching 25.69 km²-equivalent in 2010 and 26.78 km²-equivalent in 2015. Thus, the temporal pattern is an overall increase across all four available epochs rather than a single end-period jump.</p>
-<p>The positive-expansion map identifies the locations where mapped built-up surface increased relative to the 2005 baseline. The strongest spatial clusters should be described from the rendered map itself. Directional claims such as northern, southern, eastern or western expansion should only be made when clearly supported by the map. The time slider and GIF provide a visual way to examine how the mapped built-up pattern evolves between the four five-year epochs.</p>
-<div class="note"><b>Interpretation caution:</b> 11.79% refers to the increase in the <b>summed GHSL built-up-surface measurement</b>, not an 11.79% increase in Jaipur's total administrative land area. The km²-equivalent is the summed built-up surface divided by one million.</div></section>
-<section class="card"><h2>10. Limitations</h2><ol>
-<li><b>Temporal resolution:</b> GHSL provides five-year epochs in this analysis, so the result is not an annual time series and exact construction dates cannot be inferred.</li>
-<li><b>Spatial resolution:</b> the product uses a 100 m grid; small or fragmented developments may not be represented at building scale.</li>
-<li><b>Measurement meaning:</b> <code>built_surface</code> is built-up surface within grid cells, not a vector inventory of individual building footprints.</li>
-<li><b>Boundary dependence:</b> all statistics depend on the selected Jaipur ULB boundary; a district, ward, or different municipal boundary would produce different totals.</li>
-<li><b>Uncertainty:</b> observed differences can include dataset estimation/classification uncertainty as well as genuine land-development change.</li>
-<li><b>Change interpretation:</b> a positive difference between compared epochs indicates increased mapped built-up surface, but the difference map alone does not establish the exact date, cause, or type of development.</li>
-</ol></section>
-<section class="card"><h2>11. Data acknowledgement</h2><p>Global Human Settlement Layer (GHSL), European Commission Joint Research Centre, GHS-BUILT-S R2023A. Jaipur ULB boundary: <code>SBM_ULBs</code> from <code>ramSeraph/indian_admin_boundaries</code>, urban release.</p></section>
-<p class="footer">Generated from the Jaipur GHSL Built-up Surface Expansion notebook.</p></main>
-<script>
-(() => {
-  const data = [
-    { year: 2005, surface: 24.59525111, change: 0, percent: 0 },
-    { year: 2010, surface: 25.68788675, change: 1.09263564, percent: 4.44 },
-    { year: 2015, surface: 26.78458617, change: 2.18933506, percent: 8.90 },
-    { year: 2020, surface: 27.49619993, change: 2.90094882, percent: 11.79 },
-  ];
-  const svg = document.querySelector(".chart-svg");
-  const grid = svg.querySelector(".chart-grid-lines");
-  const yLabels = svg.querySelector(".chart-y-labels");
-  const xLabels = svg.querySelector(".chart-x-labels");
-  const pointsGroup = svg.querySelector(".chart-points");
-  const line = svg.querySelector(".chart-line");
-  const area = svg.querySelector(".chart-area");
-  const yTitle = svg.querySelector(".chart-y-title");
-  const readoutValue = document.querySelector("[data-readout-value]");
-  const readoutDetail = document.querySelector("[data-readout-detail]");
-  const modeButtons = [...document.querySelectorAll("[data-chart-mode]")];
-  const xPositions = [120, 305, 490, 675];
-  const plot = { top: 48, bottom: 330 };
-  let mode = "surface";
-  let selectedIndex = data.length - 1;
-  const ns = "http://www.w3.org/2000/svg";
-
-  function element(name, attributes = {}) {
-    const node = document.createElementNS(ns, name);
-    for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value);
-    return node;
-  }
-
-  function setReadout(index) {
-    selectedIndex = index;
-    const item = data[index];
-    const isSurface = mode === "surface";
-    const value = isSurface ? item.surface : item.change;
-    readoutValue.textContent = isSurface
-      ? `${value.toFixed(2)} km²-equivalent`
-      : `${value.toFixed(2)} km²-equivalent`;
-    readoutDetail.textContent = isSurface
-      ? `${item.year} · ${item.percent === 0 ? "baseline" : `+${item.percent.toFixed(2)}% from 2005`}`
-      : `${item.year} · ${item.percent === 0 ? "baseline" : `+${item.percent.toFixed(2)}% from 2005`}`;
-    pointsGroup.querySelectorAll(".chart-point").forEach((point, pointIndex) => {
-      point.classList.toggle("is-active", pointIndex === index);
-    });
-  }
-
-  function draw() {
-    const isSurface = mode === "surface";
-    const values = data.map(item => isSurface ? item.surface : item.change);
-    const min = isSurface ? 24 : 0;
-    const max = isSurface ? 28 : 3.2;
-    const ticks = isSurface ? [24, 25, 26, 27, 28] : [0, 0.8, 1.6, 2.4, 3.2];
-    const y = value => plot.bottom - ((value - min) / (max - min)) * (plot.bottom - plot.top);
-
-    grid.replaceChildren();
-    yLabels.replaceChildren();
-    xLabels.replaceChildren();
-    pointsGroup.replaceChildren();
-    ticks.forEach(tick => {
-      const tickY = y(tick);
-      grid.append(element("line", { x1: 82, x2: 730, y1: tickY, y2: tickY, class: "chart-grid" }));
-      const label = element("text", { x: 70, y: tickY + 4, "text-anchor": "end", class: "chart-axis" });
-      label.textContent = tick.toFixed(1);
-      yLabels.append(label);
-    });
-
-    const coords = values.map((value, index) => [xPositions[index], y(value)]);
-    const path = coords.map(([x, pointY], index) => `${index ? "L" : "M"} ${x} ${pointY}`).join(" ");
-    line.setAttribute("d", path);
-    area.setAttribute("d", `${path} L ${coords[coords.length - 1][0]} ${plot.bottom} L ${coords[0][0]} ${plot.bottom} Z`);
-    data.forEach((item, index) => {
-      const [x, pointY] = coords[index];
-      const point = element("circle", {
-        cx: x, cy: pointY, r: 6, class: "chart-point", tabindex: 0, role: "button",
-        "aria-label": `${item.year}: ${values[index].toFixed(2)} ${isSurface ? "km²-equivalent built-up surface" : "km²-equivalent change"}; ${item.percent.toFixed(2)} percent change from 2005`,
-      });
-      point.addEventListener("mouseenter", () => setReadout(index));
-      point.addEventListener("focus", () => setReadout(index));
-      point.addEventListener("click", () => setReadout(index));
-      point.addEventListener("keydown", event => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          setReadout(index);
-        }
-      });
-      pointsGroup.append(point);
-      const yearLabel = element("text", { x, y: 356, "text-anchor": "middle", class: "chart-axis" });
-      yearLabel.textContent = item.year;
-      xLabels.append(yearLabel);
-    });
-
-    yTitle.textContent = isSurface
-      ? "Summed built-up surface (km²-equivalent)"
-      : "Net change from 2005 (km²-equivalent)";
-    modeButtons.forEach(button => {
-      button.setAttribute("aria-pressed", String(button.dataset.chartMode === mode));
-    });
-    setReadout(selectedIndex);
-  }
-
-  modeButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      mode = button.dataset.chartMode;
-      draw();
-    });
-  });
-  draw();
-})();
-</script>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Urban studies project portfolio featuring interactive waste-bin observations and Jaipur built-up expansion maps.">
+  <title>CS25M115_UISA_Test_2</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: #172b3a;
+      background: #f3f7f6;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.6; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 76px 0 52px; color: white; background: #123b3a; }
+    .eyebrow { margin: 0 0 12px; color: #a9d8ca; font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 740px; margin: 0; font-size: clamp(2.3rem, 6vw, 4.3rem); line-height: 1.08; }
+    header p:last-child { max-width: 650px; margin: 20px 0 0; color: #d5e7e2; font-size: 1.08rem; }
+    main { padding: 42px 0 64px; }
+    .intro { margin: 0 0 24px; color: #51616b; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+    .card { display: flex; flex-direction: column; min-height: 260px; padding: 26px; border: 1px solid #dce7e4; border-radius: 16px; background: white; box-shadow: 0 10px 28px #173b3a0b; }
+    .number { margin: 0 0 10px; color: #18806e; font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    h2 { margin: 0 0 12px; font-size: 1.4rem; line-height: 1.3; }
+    .card p:not(.number) { margin: 0 0 24px; color: #52636d; }
+    .card-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+    .link { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; padding: 11px 16px; border-radius: 8px; background: #176d60; color: white; font-weight: 700; text-decoration: none; }
+    .link-secondary { border: 1px solid #176d60; background: white; color: #176d60; }
+    .link:hover, .link:focus-visible { background: #10564c; color: white; outline: 3px solid #9ed8c9; outline-offset: 2px; }
+    .link-secondary:hover, .link-secondary:focus-visible { background: #10564c; }
+    footer { padding: 20px 0 30px; color: #64747b; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">UISA Test 2 portfolio</p>
+      <h2>HS524M – Urban Informatics and Spatial Analytics</h2>
+      <p><strong>Name:</strong> Raushan Vivek &nbsp;|&nbsp; <strong>Roll no.:</strong> CS25M115</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="intro">Choose a project to get started:</p>
+    <section class="projects" aria-label="Project questions">
+      <article class="card">
+        <p class="number">Question 1</p>
+        <h2>Interactive Web Mapping of Waste-Bin Observations</h2>
+        <p>Explore the mapped waste-bin observations, inspect their details, and view the associated field photographs.</p>
+        <div class="card-actions">
+          <a class="link" href="Question1/index.html">Open Question 1 <span aria-hidden="true">→</span></a>
+          <a class="link link-secondary" href="Question1/CS25M115_Q1.ipynb" download>Download notebook (.ipynb)</a>
+        </div>
+      </article>
+      <article class="card">
+        <p class="number">Question 2</p>
+        <h2>Jaipur Built-up Surface Expansion (2005–2020)</h2>
+        <p>View the Jaipur built-up expansion analysis, interactive maps, time series, and supporting figures.</p>
+        <div class="card-actions">
+          <a class="link" href="Question2/index.html">Open Question 2 <span aria-hidden="true">→</span></a>
+          <a class="link link-secondary" href="Question2/CS25M115_Q2.ipynb" download>Download notebook (.ipynb)</a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="wrap">UISA Test 2 portfolio</footer>
+</body>
+</html>
